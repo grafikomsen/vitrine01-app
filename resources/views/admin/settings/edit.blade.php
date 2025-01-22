@@ -1,0 +1,227 @@
+@extends('admin.layouts.app')
+@section('main')
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-5 border-bottom">
+        <h2 class="fs-2 fw-bold">Modifier les Paramètres</h2>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <a href="{{ route('admin.settings') }}" class="btn btn-primary btn-sm shadow-sm rounded-0 border-0">
+                Retour <i class="fa fa-close text-danger fw-bolder px-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <section class="content h-100">
+        <div class="container-fluid h-100">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-md-12">
+
+
+                        <form method="POST" name="editSettingForm" id="editSettingForm">
+                            <div class="card card-secondary rounded-1">
+                                <div class="card-header text-start">
+                                    <h3 class="text-uppercase fw-bold mt-2">Informations du SEO</h3>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group mb-3">
+                                        <label for="website_title">Titre du web site</label>
+                                        <input type="text" name="website_title" id="website_title" value="{{ $setting->website_title }}" class="form-control rounded-1" placeholder="Enter le titre du site web">
+                                        <p class="error name-error text-danger"></p>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="description">Description</label>
+                                        <textarea name="description" id="description" rows="6" class="form-control">{{ $setting->answer }}</textarea>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label for="keyword">Le mot clé</label>
+                                                <input type="text" name="keyword" id="keyword" value="{{ $setting->keyword }}" class="form-control rounded-1" placeholder="Enter le mot clé">
+                                                <p class="error name-error text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label for="url_canonique">Url canonique</label>
+                                                <input type="text" name="url_canonique" id="url_canonique" value="{{ $setting->url_canonique }}" class="form-control rounded-1" placeholder="Enter l' url canonique">
+                                                <p class="error name-error text-danger"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <h3 class="text-uppercase fw-bold mt-2">Informations du lien Google</h3>
+                                        <div class="col-12 col-md-6">
+                                            <label for="url_googleMaps">Google Map</label>
+                                            <input type="text" name="url_googleMaps" id="url_googleMaps" class="form-control rounded-1" placeholder="Enter l'url de google map">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="url_googleSearchConsole">Google search Console</label>
+                                            <input type="text" name="url_googleSearchConsole" id="url_googleSearchConsole" class="form-control rounded-1" placeholder="Enter l'url google search console">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-secondary my-4 rounded-1">
+                                <div class="card-header text-start">
+                                    <h3 class="text-uppercase fw-bold mt-2">Informations des réseaux sociaux</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <label for="url_facebook">Facebook</label>
+                                            <input type="text" name="url_facebook" id="url_facebook" class="form-control rounded-1" placeholder="Enter l'url de Facebook">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="url_instagram">Instagram</label>
+                                            <input type="text" name="url_instagram" id="url_instagram" class="form-control rounded-1" placeholder="Enter l'url de Instagram">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="url_twintter">Twintter</label>
+                                            <input type="text" name="url_twintter" id="url_twintter" class="form-control rounded-1" placeholder="Enter l'url de Twintter">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <label for="email_1">Adresse mail 01</label>
+                                            <input type="text" name="email_1" id="email_1" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="ico">Adresse mail 02</label>
+                                            <input type="text" name="email_2" id="email_2" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="ico">Adresse mail 03</label>
+                                            <input type="text" name="email_3" id="email_3" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-secondary my-4 rounded-1">
+                                <div class="card-header text-start">
+                                    <h3 class="text-uppercase fw-bold mt-2">Informations de contacts</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <label for="phone_1">N° de téléphone 01</label>
+                                            <input type="text" name="phone_1" id="phone_1" class="form-control rounded-1" placeholder="Enter le N° de téléphone">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="phone_2">N° de téléphone 02</label>
+                                            <input type="text" name="phone_2" id="phone_2" class="form-control rounded-1" placeholder="Enter le N° de téléphone">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="phone_3">N° de téléphone 03</label>
+                                            <input type="text" name="phone_3" id="phone_3" class="form-control rounded-1" placeholder="Enter le N° de téléphone">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <label for="email_1">Adresse mail 01</label>
+                                            <input type="text" name="email_1" id="email_1" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="ico">Adresse mail 02</label>
+                                            <input type="text" name="email_2" id="email_2" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="ico">Adresse mail 03</label>
+                                            <input type="text" name="email_3" id="email_3" class="form-control rounded-1" placeholder="Enter le mail">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-secondary my-4 rounded-1 p-4">
+                                <div class="form-group mb-3">
+                                    <label for="status">Status</label>
+                                    <select name="status" id="status" class="form-control rounded-0">
+                                        <option {{ ($setting->status == 1) ? 'selected' : '' }} value="1">Activé</option>
+                                        <option {{ ($setting->status == 0) ? 'selected' : '' }} value="0">Désactivé</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" name="submit" class="btn btn-primary border-0 rounded-0">Modifiez</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+             </div>
+            <!-- /.row -->
+            <!-- /.row (main row) -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+@endsection
+
+@section('extraJs')
+
+    <script>
+
+        $('#editSettingForm').submit(function(event){
+            event.preventDefault();
+            $("button[type='submit']").prop('disabled',true);
+            $.ajax({
+                url: '{{ route("admin.settings.updated",$setting->id) }}',
+                type: 'PUT',
+                dataType: 'json',
+                data: $('#editSettingForm').serializeArray(),
+                success: function (response) {
+                    $("button[type='submit']").prop('disabled',false);
+                    if (response.status == 200) {
+                        window.location.href = "{{ route('admin.settings') }}";
+                    } else {
+                        $('.name-error').html(response.errors.name);
+                    }
+                }
+            });
+        });
+
+        Dropzone.autoDiscover = false;
+        const dropzone = $("#image").dropzone({
+            init: function() {
+                this.on('addedfile', function(file) {
+                    if (this.files.length > 1) {
+                        this.removeFile(this.files[0]);
+                    }
+                });
+            },
+            url:  "{{ route('tempUpload') }}",
+            maxFiles: 1,
+            addRemoveLinks: true,
+            acceptedFiles: "image/jpeg,image/png,image/gif,image/webp",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }, success: function(file, response){
+                $("#image_id").val(response.id);
+                //console.log(response)
+            }
+        });
+
+    </script>
+
+@endsection

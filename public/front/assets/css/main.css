@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1 300;1 400;1 500;1 600;1 700;1 800;1 900&display=swap');
+
+:root {
+    --primaryColor: #187CB7;
+    --secondaryColor: #4abffa;
+    --darbkColor: #000000;
+    --whiteColor: #FFFFFF;
+    --shadowColor: rgba(0, 0, 0, .2);
+    --primaryFont: "Montserrat Alternates", sans-serif;
+}
+
+* {
+    font-family: var(--primaryFont);
+}
+
+h1,
+h2 {
+    color: var(--primaryColor);
+    font-weight: 900;
+}
+
+h3,
+h4,
+h5,
+h6{
+    color: var(--primaryColor);
+    font-weight: 500;
+}
+
+p {
+    color: var(--primaryColor) !important;
+    font-size: 18px;
+}
+
+span {
+    color: var(--secondaryColor);
+}
+
+.title-color {
+    color: var(--secondaryColor) !important;
+}
+
+.btn-primary {
+    background-color: var(--secondaryColor);
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primaryColor);
+}
+
+.bg-primary {
+    background-color: var(--primaryColor) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondaryColor) !important;
+}
+
+.bg-thirt {
+    background-color: var(--cardColor2);
+}
+
+/*** NAVBAR-TOP ***/
+.Top-bar{
+    background-color: var(--primaryColor);
+}
+
+/*** NAVBAR ***/
+.nav-link {
+    color: var(--primaryColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.active {
+    color: var(--secondaryColor) !important;
+}
+
+.nav-link:hover {
+    color: var(--secondaryColor) !important;
+}
+
+/*** HEADER ***/
+
+
+/*** SECTION HEROS ***/
+
+
+
+/*** SECTION SERVICES ***/
+.services .card {
+    background-color: var(--cardColor);
+}
+
+.services .card i {
+    color: var(--whiteColor);
+    font-size: 1.7rem;
+}
+
+/*** SECTION PROJET ***/
+
+/*** FOOTER ***/
+footer .social-media i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .1rem solid var(--secondaryColor);
+    border-radius: 50%;
+    box-shadow: .2rem .2rem .2rem var(--darbkColor);
+    font-size: 1rem;
+    color: var(--secondaryColor);
+    transition: .3s ease;
+}
+
+footer .social-media i:hover {
+    background: var(--secondaryColor);
+    color: var(--whiteColor);
+}
+
+
+
+/*** PAGE SERVICES ***/
+.Breadcrumb {
+    background: url('../images/Breadcrumb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Breadcrumb .breadcrumb-text {
+    color: var(--whiteColor);
+}
+
+.section-helper {
+    background: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-title {
+    color: var(--primaryColor);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+@extends('layouts.app')
+@section('main')
+
+    <section class="Breadcrumb py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item">
+                        <a class="nav-link px-2 fw-bold text-white" href="{{ route('home') }}">Acceuil</a>
+                    </li>
+                    <span class="text-white fw-bold">/</span>
+                    <li class="fw-bold active" aria-current="page">
+                        <a class="nav-link px-2 fw-bold active" href="{{ route('about') }}">A propos de</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="bg-light p-5 team">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <h2 class="text-center fw-bold pb-4">NÔTRE ÉQUIPE</h2>
+                    <p class="text-center">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum adipisci praesentium quae magnam ullam totamriam, inventore
+                        cupiditate possimus non dolore tempora!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{ asset('front/assets/images/team-1.jpg') }}" class="img-thumbnail border-0" alt="...">
+                        <div class="card-body">
+                            <h5 class="text-center">Fatim LÔ</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
+                            <div class="text-center">
+                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{ asset('front/assets/images/team-2.jpg') }}" class="img-thumbnail border-0" alt="...">
+                        <div class="card-body">
+                            <h5 class="text-center">Fatim LÔ</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
+                            <div class="text-center">
+                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{ asset('front/assets/images/team-3.jpg') }}" class="img-thumbnail border-0" alt="...">
+                        <div class="card-body">
+                            <h5 class="text-center">Fatim LÔ</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
+                            <div class="text-center">
+                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{ asset('front/assets/images/team-4.jpg') }}" class="img-thumbnail border-0" alt="...">
+                        <div class="card-body">
+                            <h5 class="text-center">Fatim LÔ</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
+                            <div class="text-center">
+                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+@endsection
