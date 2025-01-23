@@ -27,6 +27,7 @@
                                 <thead>
                                     <tr>
                                         <th>Titre du site Web</th>
+                                        <th>Image Seo</th>
                                         <th width="100">Status</th>
                                         <th width="100">Date de création</th>
                                         <th width="100">Date de modification</th>
@@ -38,6 +39,13 @@
                                         @foreach ($settings as $setting)
                                         <tr>
                                             <td>{{ $setting->website_title }}</td>
+                                            <td>
+                                                @if (!empty($setting->image))
+                                                    <img class="img-thumbnail" src="{{ asset('uploads/settings/'.$setting->image) }}" width="50" alt="{{ $setting->name }}">
+                                                @else
+                                                    <img class="img-thumbnail" src="{{ asset('front/assets/images/pexels-photo.jpeg') }}" width="50" alt="pas d'image">
+                                                @endif
+                                            </td>
                                             <td>
                                                 @if ($setting->status == 1)
                                                 <span class="badge rounded-1 bg-primary">Activé</span>

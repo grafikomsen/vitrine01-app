@@ -4,7 +4,9 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Settings;
+use App\Models\TempFile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class SettingController extends Controller
@@ -85,15 +87,14 @@ class SettingController extends Controller
                 ]);
             }
 
+            $oldImageName = $setting->image;
+
             $setting->website_title = $request->website_title;
             $setting->description   = $request->description;
             $setting->keyword       = $request->keyword;
-            $setting->email_1       = $request->email_1;
-            $setting->email_2       = $request->email_2;
-            $setting->email_3       = $request->email_3;
-            $setting->phone_1       = $request->phone_1;
-            $setting->phone_2       = $request->phone_2;
-            $setting->phone_3       = $request->phone_3;
+            $setting->email         = $request->email;
+            $setting->address       = $request->address;
+            $setting->phone         = $request->phone;
             $setting->url_canonique             = $request->url_canonique;
             $setting->url_googleSearchConsole   = $request->url_googleSearchConsole;
             $setting->url_googleMaps            = $request->url_googleMaps;
@@ -103,6 +104,29 @@ class SettingController extends Controller
             $setting->url_tictok    = $request->url_tictok;
             $setting->status        = $request->status;
             $setting->save();
+
+            if ($request->image_id > 0) {
+                # code...
+                $tempImage = TempFile::where('id', $request->image_id)->first();
+                $tempFileName = $tempImage->name;
+                $imageArray = explode('.',$tempFileName);
+                $extension = end($imageArray);
+
+                $newFileName = 'setting'.'-'.strtotime('now').'-'.$setting->id.'.'.$extension;
+                $sourcePath = './uploads/temp/'.$tempFileName;
+
+                // Delete
+                $sourcePathOlder = './uploads/settings/'.$oldImageName;
+                File::delete($sourcePathOlder);
+
+                $desPath = './uploads/settings/'.$newFileName;
+                File::copy($sourcePath,$desPath);
+
+                $setting->image = $newFileName;
+                $setting->save();
+
+                File::delete($sourcePath);
+            }
 
         Session()->flash('success','setting modifié avec succéss');
         return response()->json([

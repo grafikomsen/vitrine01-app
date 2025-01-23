@@ -43,97 +43,37 @@
             <!-- Contact info box -->
             <div class="row g-4 g-md-5 mt-0 mt-lg-3">
                 <!-- Box item -->
-                <div class="col-lg-4 mt-lg-0">
-                    <div class="card card-body bg-primary rounded-1 shadows py-5 text-center h-100 border-0">
+                <div class="col-12 col-md-2 mt-lg-0"></div>
+                <div class="col-12 col-md-8 mt-lg-0">
+                    <div class="card card-body bg-primary rounded-1 shadows py-4 text-center h-100 border-0">
                         <!-- Title -->
                         <h5 class="text-white fw-bolder mb-3">Customer Support</h5>
-                        <ul class="list-inline mb-0">
+                        <ul class="list-inline d-grid align-content-center justify-content-center mb-0">
                             <!-- Address -->
                             <li class="list-item mb-3">
                                 <a href="#" class="nav-link text-white">
                                     <i class="fas fa-fw fa-map-marker-alt me-2 mt-1"></i>
-                                    Example Cop.  Park Street, MI 2222
+                                    {{ getSettings()->address }}
                                 </a>
                             </li>
                             <!-- Phone number -->
                             <li class="list-item mb-3">
                                 <a href="#" class="nav-link text-white">
                                     <i class="fas fa-fw fa-phone me-2"></i>
-                                    (XXX) XXX-XXXX
+                                    {{ getSettings()->phone }}
                                 </a>
                             </li>
                             <!-- Email id -->
                             <li class="list-item mb-0">
                                 <a href="#" class="nav-link text-white">
                                     <i class="far fa-fw fa-envelope me-2"></i>
-                                    example@email.com
+                                    {{ getSettings()->email }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Box item -->
-                <div class="col-lg-4 mt-lg-0">
-                    <div class="card card-body rounded-1 shadow py-5 text-center h-100 border-0">
-                        <!-- Title -->
-                        <h5 class="mb-3  fw-bolder">Contact Address</h5>
-                        <ul class="list-inline mb-0">
-                            <!-- Address -->
-                            <li class="list-item mb-3 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-fw fa-map-marker-alt me-2 mt-1">
-                                    </i>Example Cop.  Park Street, MI 22222
-                                </a>
-                            </li>
-                            <!-- Phone number -->
-                            <li class="list-item mb-3 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-fw fa-phone me-2">
-                                    </i>+XXX-XXX-XXX
-                                </a>
-                            </li>
-                            <!-- Email id -->
-                            <li class="list-item mb-0 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-fw fa-envelope me-2">
-                                    </i>example@email.com
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Box item -->
-                <div class="col-lg-4 mt-lg-0">
-                    <div class="card card-body rounded-1 shadow py-5 text-center h-100 border-0">
-                        <!-- Title -->
-                        <h5 class="mb-3 fw-bolder">Main Office Address</h5>
-                        <ul class="list-inline mb-0">
-                            <!-- Address -->
-                            <li class="list-item mb-3 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-fw fa-map-marker-alt me-2 mt-1"></i>
-                                    Example Cop.  Park Street, MI 22222
-                                </a>
-                            </li>
-                            <!-- Phone number -->
-                            <li class="list-item mb-3 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-fw fa-phone me-2"></i>
-                                    (XXX) XXX-XXXX
-                                </a>
-                            </li>
-                            <!-- Email id -->
-                            <li class="list-item mb-0 h6 fw-light">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-fw fa-envelope me-2"></i>
-                                    example@email.com
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="col-12 col-md-2 mt-lg-0"></div>
             </div>
         </div>
     </section>
@@ -142,7 +82,7 @@
         <div class="container my-5">
             <div class="row g-4 g-lg-0">
                 <div class="col-12 col-md-6 p-4">
-                    <iframe class="w-100 h-100 grayscale rounded-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin" height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe class="w-100 h-100 grayscale rounded-1" src="{{ getSettings()->url_googleMaps }}" height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-12 col-md-6 p-4">
                     <!-- Contact form START -->

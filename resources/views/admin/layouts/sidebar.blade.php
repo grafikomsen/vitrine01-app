@@ -1,5 +1,5 @@
 <div class="position-sticky vh-100 pt-3 sidebar-sticky">
-    <ul class="nav flex-column h-100">
+    <ul class="nav flex-column">
         <li class="nav-item">
             <a class="nav-link text-uppercase nav-link fs-2 fw-bolder active" aria-current="page" href="{{ route('admin.dashboard') }}">
             <span data-feather="home" class="align-text-bottom"></span>

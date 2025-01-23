@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{{ asset('admin/assets/css/signin.css') }}">
     </head>
     <body class="text-center">
-        <main class="m-auto w-25 p-5 card rounded-0">
+        <main class="m-auto w-25 p-5 card shadow-lg rounded-0">
             @if (Session::has('error'))
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     {{ Session::get('error') }}
@@ -27,9 +27,9 @@
             <form action="{{ route('admin.authenticate') }}" method="POST">
                 @csrf
                 <a href="{{ route('home') }}">
-                    <img class="mb-2" src="{{ asset('front/assets/images/logo.webp') }}" alt="logo" width="190" height="40">
+                    <img class="mb-2" src="{{ asset('front/assets/images/logo.webp') }}" alt="logo" width="180" height="40">
                 </a>
-                <h1 class="h5 mb-3 fw-bolder">Se connecter au Panel</h1>
+                <h3 class="h3 mb-3 fw-bolder">Se connecter</h3>
 
                 <div class="input-group mb-3">
                     <input type="email" name="email" value="{{ old('email') }}" class="form-control rounded-0  @error('email') is-invalid @enderror" placeholder="info@exemple.com" >
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="password" name="password" class="form-control rounded-0  @error('password') is-invalid @enderror" placeholder="********" >
+                    <input type="password" name="password" class="form-control rounded-0  @error('password') is-invalid @enderror" placeholder="************************" >
                     <span class="input-group-text rounded-0">
                         <i class="fa fa-lock"></i>
                     </span>
@@ -57,7 +57,7 @@
                     </label>
                 </div>
                 <button class="w-100 btn btn-primary rounded-0" type="submit">Se connecter</button>
-                <p class="mt-2 mb-0 fw-semibold">&copy; GRAFIKOM SEN 2017–2025</p>
+                <p class="mt-2 mb-0 fw-semibold">&copy; GRAFIKOM SEN 2025</p>
             </form>
         </main>
         <script src="{{ asset('admin/assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

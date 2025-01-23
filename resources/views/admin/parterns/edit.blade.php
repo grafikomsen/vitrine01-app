@@ -44,7 +44,7 @@
                                                     <br>Drop files here or click to upload.<br><br>
                                                 </div>
                                             </div>
-                                            <img class="img-thumbnail my-2" src="{{ asset('uploads/blogs/'.$partern->image) }}" width="300" alt="{{ $partern->name }}">
+                                            <img class="img-thumbnail my-2" src="{{ asset('uploads/parterns/'.$partern->image) }}" width="300" alt="{{ $partern->name }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

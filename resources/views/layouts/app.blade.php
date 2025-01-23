@@ -3,9 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ getSettings()->description }}">
+        <meta name="keyword" content="{{ getSettings()->keyword }}">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="_token" content="{{ csrf_token() }}">
-        <title>Document</title>
+
+        @if (!empty(getSettings()) && getSettings()->website_title != '')
+            <title>{{ getSettings()->website_title }}</title>
+        @else
+            <title>Document</title>
+        @endif
+
         <!-- FONTAWSOME -->
         <link  rel="stylesheet" href="{{ asset('front/assets/fontawesome/css/all.css') }}">
         <!-- BOXICONS -->
@@ -23,7 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white px-2">
                                 <i class="fa fa-location-dot"></i>
-                                <span class="h6">Saly Portudal, Mbour - Sénégal</span>
+                                <span class="h6">{{ getSettings()->address }}</span>
                             </a>
                         </li>
                     </ul>
@@ -31,14 +39,13 @@
                         <li class="nav-item">
                             <a href="mailto:info@grafikomsen.com" class="nav-link text-white px-2">
                                 <i class="fa fa-envelope"></i>
-                                <span class="h6">info@grafikomsen.com</span>
+                                <span class="h6">{{ getSettings()->email }}</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a  href="tel:+221-119-63-63" class="nav-link text-white px-2">
-                                <span class="support-icon">Contactez-nous : </span>
                                 <i class="fa fa-phone"></i>
-                                <span class="h6">+221 78 119 63 63</span>
+                                <span class="h6">{{ getSettings()->phone }}</span>
                             </a>
                         </li>
                     </ul>
@@ -55,7 +62,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4 active" aria-current="page" href="{{ route('home') }}">ACCEUIL</a>
+                                <a class="nav-link fw-bold pe-4 active" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
                             </li>
                             <!--<li class="nav-item dropdown">
                                 <a class="nav-link pe-4 fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,16 +78,16 @@
                                 <a class="nav-link fw-bold pe-4" href="{{ route('services') }}">SERVICES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('projets') }}">NOS PARTENAIRES</a>
+                                <a class="nav-link fw-bold pe-4" href="{{ route('about') }}">A PROPOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('blogs') }}">BLOGS</a>
+                                <a class="nav-link fw-bold pe-4" href="{{ route('projets') }}">NOS PARTENAIRES</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-4" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary fw-bold rounded-1 border-0 px-3">Demande de devis</a>
+                        <a href="#" class="btn btn-primary fw-bold rounded-0 border-0 px-3">Demande de devis</a>
                     </div>
                 </div>
             </nav>
@@ -139,17 +146,17 @@
                     <p class="text-white">&copy; 2025 Grafikom sen, Inc. All rights reserved.</p>
                     <ul class="list-unstyled d-flex social-media">
                         <li class="ms-3">
-                            <a class="nav-link text-white" href="#">
+                            <a class="nav-link text-white" href="{{ getSettings()->twitter }}">
                                 <i class="fab fa-twitter text-white"></i>
                             </a>
                         </li>
                         <li class="ms-3">
-                            <a class="nav-link text-white" href="#">
+                            <a class="nav-link text-white" href="{{ getSettings()->instagram  }}">
                                 <i class="fab fa-instagram text-white"></i>
                             </a>
                         </li>
                         <li class="ms-3">
-                            <a class="nav-link text-white" href="#">
+                            <a class="nav-link text-white" href="{{ getSettings()->facebook  }}">
                                 <i class="fab fa-facebook-f text-white"></i>
                             </a>
                         </li>
