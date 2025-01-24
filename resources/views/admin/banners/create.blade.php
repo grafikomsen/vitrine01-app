@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('main')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-5 border-bottom">
-        <h2 class="fs-2 fw-bold">Créer le bannier</h2>
+        <h2 class="fs-2 fw-bold">Créer le slide</h2>
         <div class="btn-toolbar mb-2 mb-md-0">
 
         </div>
@@ -23,7 +23,7 @@
                             <div class="card-body">
 
                                 <div class="form-group mb-3">
-                                    <label for="name">Nom du bannier</label>
+                                    <label for="name">Nom du slide</label>
                                     <input type="text" name="name" id="name" class="form-control rounded-1" placeholder="Enter le nom du bannier">
                                     <p class="error name-error text-danger"></p>
                                 </div>

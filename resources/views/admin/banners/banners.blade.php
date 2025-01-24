@@ -2,7 +2,7 @@
 @section('main')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2 class="fs-2 fw-bold">Liste des banniérès</h2>
+        <h2 class="fs-2 fw-bold">Liste des slides</h2>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a href="{{ route('admin.banners') }}" class="btn btn-primary btn-sm shadow-sm rounded-1 border-0">
                 Actualisée la page
@@ -37,7 +37,7 @@
                                 </form>
                             </div>
                             <a href="{{ route('admin.banners.create') }}" class="btn btn-primary btn-sm shadow-sm rounded-1 border-0">
-                                <i class="fas fa-plus"></i> &nbsp;Creer un banner
+                                <i class="fas fa-plus"></i> &nbsp;Creer le slide
                             </a>
                         </div>
                         <div class="card-body table-responsive p-0">
@@ -45,8 +45,8 @@
                                 <thead>
                                     <tr>
                                         <th width="50">ID</th>
-                                        <th>Nom de banner</th>
-                                        <th width="100">Image du banner</th>
+                                        <th>Nom de slide</th>
+                                        <th width="100">Image du slide</th>
                                         <th width="100">Date de création</th>
                                         <th width="100">Status</th>
                                         <th width="100">Action</th>

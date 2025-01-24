@@ -62,10 +62,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4 active" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
+                                <a class="nav-link fw-bold pe-3 active" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
                             </li>
                             <!--<li class="nav-item dropdown">
-                                <a class="nav-link pe-4 fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link pe-3 fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     SERVICES
                                 </a>
                                 <ul class="dropdown-menu rounded-0">
@@ -75,13 +75,13 @@
                                 </ul>
                             </li>-->
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('services') }}">SERVICES</a>
+                                <a class="nav-link fw-bold pe-3" href="{{ route('services') }}">SERVICES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('about') }}">A PROPOS</a>
+                                <a class="nav-link fw-bold pe-3" href="{{ route('about') }}">A PROPOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('projets') }}">NOS PARTENAIRES</a>
+                                <a class="nav-link fw-bold pe-3" href="{{ route('projets') }}">NOS PARTENAIRES</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-4" href="{{ route('contact') }}">CONTACT</a>

@@ -89,32 +89,35 @@
             <h1 class="mb-3 text-center text-white">NOS VALEURS</h1>
             <div class="row">
                 <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card rounded-1">
+                    <div class="card rounded-1 p-2 mb-4">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE MISSION</h5>
                         <div class="card-body">
-                            <li class="">Valeurs 1</li>
-                            <li class="">Valeurs 1</li>
-                            <li class="">Valeurs 1</li>
-                            <li class="">Valeurs 1</li>
+                            <p> Accomplir une tâche crédible et pérenne
+                                pour maintenir une propreté et une hygiène agréable
+                                pour votre environnement.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card">
+                    <div class="card rounded-1 p-2 mb-4">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE VISION</h5>
                         <div class="card-body">
-                            <li class="">Valeurs 2</li>
-                            <li class="">Valeurs 2</li>
-                            <li class="">Valeurs 2</li>
-                            <li class="">Valeurs 2</li>
+                            <p> Etre la solution de référence sur le marché pour
+                                tout besoin de nettoyage technique de nos clients.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card">
+                    <div class="card rounded-1 p-2 mb-4">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOS VALEURS</h5>
                         <div class="card-body">
-                            <li class="">Valeurs 3</li>
-                            <li class="">Valeurs 3</li>
-                            <li class="">Valeurs 3</li>
-                            <li class="">Valeurs 3</li>
+                            <li class="list-unstyled"> -Engagement</li>
+                            <li class="list-unstyled"> -Innovation</li>
+                            <li class="list-unstyled"> -Esprit d’équipe</li>
+                            <li class="list-unstyled"> -Respect et Intégrité</li>
+                            <li class="list-unstyled"> -Satisfaction client</li>
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@
         <li class="nav-item">
             <a class="nav-link text-uppercase fs-5 fw-bolder" href="{{ route('admin.banners') }}">
                 <span data-feather="users" class="align-text-bottom"></span>
-                Banniérès
+                Slides
             </a>
         </li>
         <li class="nav-item">
