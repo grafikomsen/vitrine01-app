@@ -11,10 +11,23 @@ jobs:
       - name: Get the latest code
         uses: actions/checkout@v4.2.2
       - uses: actions/setup-node@master
+
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example','.env');"
+
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
       - name: Generate key
         run: php artisan key:generate
       - name: Generate storage link
@@ -25,6 +38,7 @@ jobs:
           php artisan cache:clear
           php artisan route:clear
           php artisan optimize:clear
+
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
       - name: 📂 Sync files
