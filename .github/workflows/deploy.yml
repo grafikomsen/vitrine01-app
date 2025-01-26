@@ -18,15 +18,10 @@ jobs:
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-
-      - name: 🔨 Build Project
+      - name: Compile CSS and Javascript
         run: |
           npm install
-          npm run build
+          npm run prod
 
       - name: Generate key
         run: php artisan key:generate
