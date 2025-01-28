@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb py-5">
+    <section class="Breadcrumb bg-primary py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -78,7 +78,7 @@
         </div>
     </section>
 
-    <section class="section-helper py-5 text-center">
+    <section class="section-helper bg-primary py-5 text-center">
         <div class="container">
            <div class="help-container">
                 <h1 class="title text-white">Do you need help?</h1>

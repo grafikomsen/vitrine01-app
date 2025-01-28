@@ -3,7 +3,7 @@
 
     <section class="Breadcrumb py-5">
         <div class="container">
-            <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb bg-primary">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item">
                         <a class="nav-link px-2 fw-bold text-white" href="{{ route('home') }}">Acceuil</a>

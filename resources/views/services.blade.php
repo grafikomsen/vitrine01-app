@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb py-5">
+    <section class="Breadcrumb bg-primary py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -26,7 +26,7 @@
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="card rounded-1 border-0 shadow-sm mb-4">
                             @if (!empty($service->image))
-                                <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/services/'.$service->image) }}" width="100%" height="180" role="img" alt="{{ $service->name }}"/>
+                                <img class="bd-placeholder-img card-img-top rounded-0 p-2 w-100" src="{{ asset('uploads/services/'.$service->image) }}" alt="{{ $service->name }}"/>
                             @else
                                 <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $service->name }}">
                             @endif
@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <section class="section-helper py-5 text-center">
+    <section class="section-helper bg-primary py-5 text-center">
         <div class="container">
            <div class="help-container">
                 <h1 class="title text-white">Do you need help?</h1>

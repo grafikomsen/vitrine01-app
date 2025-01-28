@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb py-5">
+    <section class="Breadcrumb bg-primary py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -14,6 +14,20 @@
                     </li>
                 </ol>
             </nav>
+        </div>
+    </section>
+
+    <section class="about bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 mb-3">
+                    <h2 class="fs-1 text-uppercase py-2">{{ $pages->name }}</h2>
+                    <p>{{ $pages->content }}</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 mb-3">
+                    <img src="{{ asset('uploads/pages/'.$pages->image) }}" class="img-thumbnail border-0 shadow-sm py-2" alt="{{ $pages->name }}">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -31,66 +45,25 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card shadow-sm border-0">
-                        <img src="{{ asset('front/assets/images/team-1.jpg') }}" class="img-thumbnail border-0" alt="...">
-                        <div class="card-body">
-                            <h5 class="text-center">Fatim LÔ</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
-                            <div class="text-center">
-                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                @if($teams->isNotEmpty())
+                    @foreach ($teams as $team)
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <div class="card shadow-sm border-0">
+                                <img src="{{ asset('uploads/teams/'.$team->image) }}" class="img-thumbnail border-0" alt="{{ $team->name }}">
+                                <div class="card-body">
+                                    <h5 class="text-center">{{ $team->name }}</h5>
+                                    <p class="card-text text-center">{{ $team->designation }}</p>
+                                    <div class="text-center">
+                                        <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                        <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card shadow-sm border-0">
-                        <img src="{{ asset('front/assets/images/team-2.jpg') }}" class="img-thumbnail border-0" alt="...">
-                        <div class="card-body">
-                            <h5 class="text-center">Fatim LÔ</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
-                            <div class="text-center">
-                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card shadow-sm border-0">
-                        <img src="{{ asset('front/assets/images/team-3.jpg') }}" class="img-thumbnail border-0" alt="...">
-                        <div class="card-body">
-                            <h5 class="text-center">Fatim LÔ</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
-                            <div class="text-center">
-                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card shadow-sm border-0">
-                        <img src="{{ asset('front/assets/images/team-4.jpg') }}" class="img-thumbnail border-0" alt="...">
-                        <div class="card-body">
-                            <h5 class="text-center">Fatim LÔ</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title.</p>
-                            <div class="text-center">
-                                <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>

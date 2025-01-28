@@ -9,7 +9,7 @@
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
 
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block p-lg-5">
                             <h1 class="text-white">{{ $banner->name }}</h1>
                             <p class="text-white">{{ $banner->content }}</p>
                             <a class="btn btn-primary px-4 rounded-1 mb-3" href="">En savoir plus</a>

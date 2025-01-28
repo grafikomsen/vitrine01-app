@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\SettingController as AdminSettingController;
 use App\Http\Controllers\admin\PageController as AdminPageController;
 use App\Http\Controllers\admin\BannerController as AdminBannerController;
 use App\Http\Controllers\admin\ParternController as AdminParternController;
+use App\Http\Controllers\admin\TeamController as AdminTeamController;
 use App\Http\Controllers\admin\TempImageController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -91,6 +92,14 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/banners/edit/{id}', [adminBannerController::class, 'edit'])->name('admin.banners.edit');
         Route::put('/banners/updated/{id}', [adminBannerController::class, 'updated'])->name('admin.banners.updated');
         Route::delete('/banners/delete/{id}', [adminBannerController::class, 'destroy'])->name('admin.banners.delete');
+
+        //TEAMS
+        Route::get('/teams', [adminTeamController::class, 'teams'])->name('admin.teams');
+        Route::get('/teams/create', [adminTeamController::class, 'create'])->name('admin.teams.create');
+        Route::post('/teams/store', [adminTeamController::class, 'store'])->name('admin.teams.store');
+        Route::get('/teams/edit/{id}', [adminTeamController::class, 'edit'])->name('admin.teams.edit');
+        Route::put('/teams/updated/{id}', [adminTeamController::class, 'updated'])->name('admin.teams.updated');
+        Route::delete('/teams/delete/{id}', [adminTeamController::class, 'destroy'])->name('admin.teams.delete');
 
         //PAGES
         Route::get('/pages', [adminPageController::class, 'pages'])->name('admin.pages');
