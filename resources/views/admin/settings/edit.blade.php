@@ -67,6 +67,47 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label for="og_locale">Og locale</label>
+                                            <input type="text" name="og_locale" id="og_locale" value="{{ $setting->og_locale }}" class="form-control rounded-1">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label for="og_type">Og type</label>
+                                            <input type="text" name="og_type" id="og_type" value="{{ $setting->og_type }}" class="form-control rounded-1">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label for="og_image_type">Og image type</label>
+                                            <input type="text" name="og_image_type" id="og_image_type" value="{{ $setting->og_image_type }}" class="form-control rounded-1">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="article_modified_time">Modification de la date de l'article</label>
+                                            <input type="date" name="article_modified_time" id="article_modified_time" value="{{ $setting->article_modified_time }}" class="form-control rounded-1">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="twitter_card">Carte de twitter</label>
+                                            <input type="text" name="twitter_card" id="twitter_card" value="{{ $setting->twitter_card }}" class="form-control rounded-1">
+                                            <p class="error name-error text-danger"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <h3 class="text-uppercase fw-bold mt-2">Informations du lien Google</h3>
                                     <div class="col-12 col-md-6">
                                         <label for="url_googleMaps">Google Map</label>
@@ -77,6 +118,12 @@
                                         <label for="url_googleSearchConsole">Google search Console</label>
                                         <input type="text" name="url_googleSearchConsole" id="url_googleSearchConsole" value="{{ $setting->url_googleSearchConsole }}" class="form-control rounded-1" placeholder="Enter l'url google search console">
                                         <p class="error name-error text-danger"></p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="Google_tag">Google Tag</label>
+                                            <textarea name="Google_tag" id="Google_tag" rows="5" class="form-control">{{ $setting->Google_tag }}</textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -134,6 +181,11 @@
                         </div>
 
                         <div class="card card-secondary my-4 rounded-1 p-4">
+                            <div class="form-group">
+                                <label for="copyright">Copyright</label>
+                                <input type="copyright" name="copyright" id="copyright" value="{{ $setting->copyright }}" class="form-control rounded-1" placeholder="Enter le mail">
+                                <p class="error name-error text-danger"></p>
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="status">Status</label>
                                 <select name="status" id="status" class="form-control rounded-0">

@@ -92,16 +92,23 @@ class SettingController extends Controller
             $setting->website_title = $request->website_title;
             $setting->description   = $request->description;
             $setting->keyword       = $request->keyword;
+            $setting->og_locale     = $request->og_locale;
+            $setting->og_type       = $request->og_type;
+            $setting->og_image_type = $request->og_image_type;
+            $setting->twitter_card  = $request->twitter_card;
             $setting->email         = $request->email;
             $setting->address       = $request->address;
             $setting->phone         = $request->phone;
+            $setting->article_modified_time     = $request->article_modified_time;
             $setting->url_canonique             = $request->url_canonique;
             $setting->url_googleSearchConsole   = $request->url_googleSearchConsole;
+            $setting->url_googleMaps            = $request->url_googleMaps;
             $setting->url_googleMaps            = $request->url_googleMaps;
             $setting->url_facebook              = $request->url_facebook;
             $setting->url_twintter  = $request->url_twintter;
             $setting->url_instagram = $request->url_instagram;
             $setting->url_tictok    = $request->url_tictok;
+            $setting->copyright     = $request->copyright;
             $setting->status        = $request->status;
             $setting->save();
 

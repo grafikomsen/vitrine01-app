@@ -2,37 +2,29 @@
 @section('main')
 
     <section class="hero">
-        <div class="bd-example-snippet bd-code-snippet">
-            <div class="bd-example">
-                @if ($banners->isNotEmpty())
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        </div>
-                        @foreach ($banners as $key => $banner)
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="520" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+        @if ($banners->isNotEmpty())
+            <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($banners as $banner)
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
 
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5 class="fs-1 fw-bold text-white">{{ $banner->name }}</h5>
-                                        <p class="text-white">{{ $banner->content }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        @endforeach
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="text-white">{{ $banner->name }}</h1>
+                            <p class="text-white">{{ $banner->content }}</p>
+                            <a class="btn btn-primary px-4 rounded-1 mb-3" href="">En savoir plus</a>
+                        </div>
                     </div>
-                @endif
+                    <button class=" carousel-control-prev" type="button" data-bs-traget="#diaporama" data-bs-slide="prev">
+                        <span class=" carousel-control-prev-icon"></span>
+                    </button>
+                    <button class=" carousel-control-next" type="button" data-bs-traget="#diaporama" data-bs-slide="next">
+                        <span class=" carousel-control-next-icon"></span>
+                    </button>
+                    @endforeach
+                </div>
             </div>
-        </div>
+        @endif
     </section>
 
     <section class="about bg-light py-5">

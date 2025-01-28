@@ -8,11 +8,27 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="_token" content="{{ csrf_token() }}">
 
+        <!-- SEO -->
         @if (!empty(getSettings()) && getSettings()->website_title != '')
-            <title>{{ getSettings()->website_title }}</title>
+        <title>{{ getSettings()->website_title }}</title>
         @else
-            <title>Document</title>
+        <title></title>
         @endif
+        <meta name="description" content="{{ getSettings()->description }}" />
+        <link rel="canonical" href="{{ getSettings()->url_canonique }}" />
+        <meta property="og:locale" content="{{ getSettings()->og_locale }}" />
+        <meta property="og:type" content="{{ getSettings()->og_type }}" />
+        <meta property="og:title" content="{{ getSettings()->website_title }}" />
+        <meta property="og:description" content="{{ getSettings()->description }}" />
+        <meta property="og:url" content="{{ getSettings()->url_canonique }}" />
+        <meta property="og:site_name" content="{{ getSettings()->website_title }}" />
+        <meta property="article:modified_time" content="{{ getSettings()->article_modified_time }}" />
+        <meta property="og:image" content="http://127.0.0.1:8000/uploads/settings/setting-1737673306-1.jpg" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1024" />
+        <meta property="og:image:type" content="{{ getSettings()->og_image_type }}" />
+        <meta name="twitter:card" content="{{ getSettings()->twitter_card }}" />
+        <!-- / SEO -->
 
         <!-- FONTAWSOME -->
         <link  rel="stylesheet" href="{{ asset('front/assets/fontawesome/css/all.css') }}">
@@ -143,7 +159,7 @@
                 </div>
 
                 <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 border-top">
-                    <p class="text-white">&copy; 2025 Grafikom sen, Inc. All rights reserved.</p>
+                    <p class="text-white">{{ getSettings()->copyright }}</p>
                     <ul class="list-unstyled d-flex social-media">
                         <li class="ms-3">
                             <a class="nav-link text-white" href="{{ getSettings()->twitter }}">
