@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Get the latest code
         uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@master
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example','.env');"
@@ -17,12 +18,10 @@ jobs:
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
 
-      - name: Install dependencies
-        run: npm install
-      - name: Build project
-        run: npm run build # Ensure this matches the script name in package.json
-      - name: Deploy
-        run: your-deploy-command-here
+      - name: Compile CSS and Javascript
+        run: |
+          npm install
+          npm run prod
 
       - name: Generate key
         run: php artisan key:generate
