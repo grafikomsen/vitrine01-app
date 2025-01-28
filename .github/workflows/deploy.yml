@@ -18,11 +18,6 @@ jobs:
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
 
-      - name: Compile CSS and Javascript
-        run: |
-          npm install
-          npm run prod
-
       - name: Generate key
         run: php artisan key:generate
       - name: Generate storage link
