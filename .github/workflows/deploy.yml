@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npm run prod # Ensure this matches the script name in package.json
+        run: npm run build # Ensure this matches the script name in package.json
       - name: Deploy
         run: your-deploy-command-here
 
