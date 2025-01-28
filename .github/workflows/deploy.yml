@@ -21,7 +21,7 @@ jobs:
       - name: Compile CSS and Javascript
         run: |
           npm install
-          npm run prod
+          npm run builds
 
       - name: Generate key
         run: php artisan key:generate

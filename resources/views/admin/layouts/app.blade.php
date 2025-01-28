@@ -42,6 +42,7 @@
 
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     @yield('main')
+                    <canvas class="my-4 w-100" id="myChart" width="900" height="10"></canvas>
                 </main>
             </div>
         </div>
