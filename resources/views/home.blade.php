@@ -1,26 +1,30 @@
 @extends('layouts.app')
 @section('main')
 
-
     <section class="hero">
-        <div class="container-fluid">
-            <div class="owl-carousel owl-theme">
-                @if ($banners->isNotEmpty())
+        @if ($banners->isNotEmpty())
+            <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
                     @foreach ($banners as $banner)
-                        <div class="item">
-                            <div class="card rounded-0 border-0">
-                                <img src="{{ asset('uploads/banners/'.$banner->image) }}" class="card-img rounded-0" alt="...">
-                                <div class="card-img-overlay d-block align-content-end text-center">
-                                    <h1 class="text-white">{{ $banner->name }}</h1>
-                                    <p class="text-white">{{ $banner->content }}</p>
-                                    <a class="btn btn-primary px-4 rounded-0 mb-3" href="">En savoir plus</a>
-                                </div>
-                            </div>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+
+                        <div class="carousel-caption d-none d-md-block p-lg-5">
+                            <h1 class="text-white">{{ $banner->name }}</h1>
+                            <p class="text-white">{{ $banner->content }}</p>
+                            <a class="btn btn-primary px-4 rounded-0 mb-3" href="">En savoir plus</a>
                         </div>
+                    </div>
+                    <button class=" carousel-control-prev" type="button" data-bs-traget="#diaporama" data-bs-slide="prev">
+                        <span class=" carousel-control-prev-icon"></span>
+                    </button>
+                    <button class=" carousel-control-next" type="button" data-bs-traget="#diaporama" data-bs-slide="next">
+                        <span class=" carousel-control-next-icon"></span>
+                    </button>
                     @endforeach
-                @endif
+                </div>
             </div>
-        </div>
+        @endif
     </section>
 
     <section class="about bg-light py-5">

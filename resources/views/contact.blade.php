@@ -28,7 +28,6 @@
                                 <div class="block text-center">
                                     <span class="text-uppercase text-sm letter-spacing"></span>
                                     <h1 class="my-3 text-uppercase text-center">Contactez - nous</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                         </div>
@@ -43,11 +42,11 @@
             <!-- Contact info box -->
             <div class="row g-4 g-md-5 mt-0 mt-lg-3">
                 <!-- Box item -->
-                <div class="col-12 col-md-2 mt-lg-0"></div>
-                <div class="col-12 col-md-8 mt-lg-0">
+
+                <div class="col-12 col-md-12 mt-lg-0">
                     <div class="card card-body bg-primary rounded-1 shadows py-4 text-center h-100 border-0">
                         <!-- Title -->
-                        <h5 class="text-white fw-bolder mb-3">Customer Support</h5>
+                        <h5 class="text-white fw-bolder mb-3">NOS INFORMATIONS DE CONTACT</h5>
                         <ul class="list-inline d-grid align-content-center justify-content-center mb-0">
                             <!-- Address -->
                             <li class="list-item mb-3">
@@ -73,7 +72,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 mt-lg-0"></div>
+
             </div>
         </div>
     </section>

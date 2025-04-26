@@ -42,7 +42,7 @@
         <link  rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
     </head>
     <body>
-        <header class="shadow sticky-top">
+        <header class="sticky-top">
             <div class="Top-bar">
                 <div class="container d-flex flex-wrap">
                     <ul class="nav me-auto">
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container">
                     <a class="navbar-brand fs-3 fw-bold" href="{{ route('home') }}">
                         <img src="{{ asset('front/assets/images/logo.webp') }}" width="170" height="40" alt="Nettoyage professionnelle Sénégal">
