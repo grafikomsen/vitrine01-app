@@ -65,7 +65,7 @@ ul {
     color: var(--primaryColor) !important;
 }
 
-.nav-link:hover {
+.nav-link:hover, .active {
     color: var(--secondaryColor) !important;
 }
 

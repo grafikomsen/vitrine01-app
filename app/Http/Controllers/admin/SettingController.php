@@ -7,6 +7,7 @@ use App\Models\Settings;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class SettingController extends Controller
@@ -20,6 +21,7 @@ class SettingController extends Controller
         }
 
         $settings = $settings->paginate(5);
+        Session::put('page', 'settings');
         return view('admin.settings.settings', compact('settings'));
     }
 

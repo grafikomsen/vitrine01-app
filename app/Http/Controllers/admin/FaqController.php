@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class FaqController extends Controller
@@ -18,6 +19,7 @@ class FaqController extends Controller
         }
 
         $faqs = $faqs->paginate(5);
+        Session::put('page', 'faqs');
         return view('admin.faqs.faqs', compact('faqs'));
     }
 

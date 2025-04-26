@@ -7,6 +7,7 @@ use App\Models\Service;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class ServicesController extends Controller
@@ -20,6 +21,7 @@ class ServicesController extends Controller
         }
 
         $services = $services->paginate(5);
+        Session::put('page', 'services');
         return view('admin.services.services', compact('services'));
     }
 

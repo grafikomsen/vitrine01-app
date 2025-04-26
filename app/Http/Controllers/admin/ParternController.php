@@ -7,6 +7,7 @@ use App\Models\Partern;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class ParternController extends Controller
@@ -20,6 +21,7 @@ class ParternController extends Controller
         }
 
         $parterns = $parterns->paginate(5);
+        Session::put('page', 'parterns');
         return view('admin.parterns.parterns', compact('parterns'));
     }
 

@@ -7,6 +7,7 @@ use App\Models\Page;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class PageController extends Controller
@@ -20,6 +21,7 @@ class PageController extends Controller
         }
 
         $pages = $pages->paginate(5);
+        Session::put('page', 'pages');
         return view('admin.pages.pages', compact('pages'));
     }
 

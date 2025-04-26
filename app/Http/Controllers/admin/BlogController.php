@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class BlogController extends Controller
@@ -20,6 +21,7 @@ class BlogController extends Controller
         }
 
         $blogs = $blogs->paginate(5);
+        Session::put('page', 'blogs');
         return view('admin.blogs.blogs', compact('blogs'));
     }
 

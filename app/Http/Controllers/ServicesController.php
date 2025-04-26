@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Faq;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ServicesController extends Controller
 {
@@ -12,6 +13,8 @@ class ServicesController extends Controller
 
         $services = Service::where('status',1)->orderBy('created_at','DESC')->get();
         $faqs = Faq::where('status',1)->orderBy('created_at','DESC')->get();
+
+        Session::put('page', 'services');
         return view('services', compact('services','faqs'));
     }
 

@@ -7,6 +7,7 @@ use App\Models\Team;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class TeamController extends Controller
@@ -20,6 +21,7 @@ class TeamController extends Controller
         }
 
         $teams = $teams->paginate(5);
+        Session::put('page', 'teams');
         return view('admin.teams.teams', compact('teams'));
     }
 

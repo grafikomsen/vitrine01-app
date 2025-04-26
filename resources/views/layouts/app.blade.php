@@ -32,10 +32,12 @@
 
         <!-- FONTAWSOME -->
         <link  rel="stylesheet" href="{{ asset('front/assets/fontawesome/css/all.css') }}">
-        <!-- BOXICONS -->
-        <link  rel="stylesheet" href="{{ asset('front/assets/boxicons/css/boxicons.min.css') }}">
         <!-- BOOTSTRAP -->
         <link  rel="stylesheet" href="{{ asset('front/assets/bootstrap/css/bootstrap.min.css') }}">
+        <!-- OWL CAROUSEL -->
+        <link rel="stylesheet" href="{{ asset('front/assets/css/owl.carousel.min.css') }}">
+        <!-- OWL DEFAULT CAROUSEL -->
+        <link rel="stylesheet" href="{{ asset('front/assets/css/owl.theme.default.min.css') }}">
         <!-- CSS -->
         <link  rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
     </head>
@@ -78,7 +80,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3 active" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'home') ? 'active' : '' }}" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
                             </li>
                             <!--<li class="nav-item dropdown">
                                 <a class="nav-link pe-3 fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,16 +93,16 @@
                                 </ul>
                             </li>-->
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3" href="{{ route('services') }}">SERVICES</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'services') ? 'active' : '' }}" href="{{ route('services') }}">SERVICES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3" href="{{ route('about') }}">A PROPOS</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'about') ? 'active' : '' }}" href="{{ route('about') }}">A PROPOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3" href="{{ route('projets') }}">NOS PARTENAIRES</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'projet') ? 'active' : '' }}" href="{{ route('projets') }}">NOS PARTENAIRES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-4" href="{{ route('contact') }}">CONTACT</a>
+                                <a class="nav-link fw-bold pe-4 {{ (Session::get('page') == 'contact') ? 'active' : '' }}" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>
                         <a href="#" class="btn btn-primary fw-bold rounded-0 border-0 px-3">Demande de devis</a>
@@ -181,8 +183,13 @@
             </div>
         </footer>
         <!-- ======================= Footer END ======================= -->
+        <!-- JQUERY -->
         <script src="{{ asset('front/assets/jquery/jquery.min.js') }}"></script>
+        <!-- BOOTSTRAP JS -->
         <script src="{{ asset('front/assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <!-- OWL CAROUSEL JS -->
+        <script src="{{ asset('front/assets/js/owl.carousel.min.js') }}"></script>
+        <!-- MAIN JS -->
         <script src="{{ asset('front/assets/js/main.js') }}"></script>
         <script>
 

@@ -8,6 +8,7 @@ use App\Models\Page;
 use App\Models\Partern;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,7 @@ class HomeController extends Controller
         $services = Service::where('status',1)->orderBy('created_at','DESC')->get();
         $banners = Banner::where('status',1)->orderBy('created_at','DESC')->get();
 
+        Session::put('page', 'home');
         return view('home', compact('services','blogs','pages','banners','parterns'));
     }
 }
