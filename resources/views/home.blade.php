@@ -52,8 +52,8 @@
             <div class="row">
                 @if ($services->isNotEmpty())
                     @foreach ($services as $service)
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div class="card shadow-sm border-0 rounded-1 mb-4">
+                        <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm border-0 rounded-1">
                                 <img src="{{ asset('uploads/services/'.$service->image) }}" width="300" height="225" class="card-img border-0 rounded-1" alt="{{ $service->name }}">
                                 <div class="card-img-overlay mb-4 d-block text-center align-content-center">
                                     <h5 class="card-title bg-white shadow-sm fw-bolder fs-4 text-center text-uppercase p-4">{{ $service->name }}</h5>
@@ -80,8 +80,8 @@
         <div class="container">
             <h1 class="mb-3 text-center text-white">NOS VALEURS</h1>
             <div class="row">
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card rounded-1 p-2 mb-4">
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
                         <h5 class="fw-bolder fs-4 text-uppercase">NOTRE MISSION</h5>
                         <div class="card-body">
                             <p> Accomplir une tâche crédible et pérenne
@@ -91,8 +91,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card rounded-1 p-2 mb-4">
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
                         <h5 class="fw-bolder fs-4 text-uppercase">NOTRE VISION</h5>
                         <div class="card-body">
                             <p> Etre la solution de référence sur le marché pour
@@ -101,8 +101,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card rounded-1 p-2 mb-4">
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
                         <h5 class="fw-bolder fs-4 text-uppercase">NOS VALEURS</h5>
                         <div class="card-body">
                             <li class="list-unstyled"> -Engagement</li>

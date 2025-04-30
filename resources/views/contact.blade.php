@@ -22,8 +22,8 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" style="background-image: url('images/banner1.jpg') ;">
                     <div class="hero-small-background-overlay"></div>
-                    <div class="container  h-100">
-                        <div class="row align-items-center d-flex h-100">
+                    <div class="container">
+                        <div class="row align-items-center d-flex">
                             <div class="col-md-12">
                                 <div class="block text-center">
                                     <span class="text-uppercase text-sm letter-spacing"></span>
