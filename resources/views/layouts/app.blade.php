@@ -28,6 +28,7 @@
         <meta property="og:image:height" content="1024" />
         <meta property="og:image:type" content="{{ getSettings()->og_image_type }}" />
         <meta name="twitter:card" content="{{ getSettings()->twitter_card }}" />
+        <meta name="google-site-verification" content="{{ getSettings()->url_googleSearchConsole }}" />
         <!-- / SEO -->
 
         <!-- FONTAWSOME -->
