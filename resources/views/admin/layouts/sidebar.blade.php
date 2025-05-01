@@ -1,9 +1,9 @@
 <div class="position-sticky vh-100 pt-3 sidebar-sticky">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link text-uppercase nav-link fs-2 fw-bolder {{ (Session::get('page') == 'dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">
+            <a class="nav-link text-uppercase nav-link fs-3 fw-bolder {{ (Session::get('page') == 'dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">
             <span data-feather="home" class="align-text-bottom"></span>
-                Dashbord
+                Tableau de bord
             </a>
         </li>
         <li class="nav-item">
@@ -39,13 +39,13 @@
         <li class="nav-item">
             <a class="nav-link text-uppercase fs-5 fw-bolder {{ (Session::get('page') == 'teams') ? 'active' : '' }}" href="{{ route('admin.teams') }}">
                 <span data-feather="users" class="align-text-bottom"></span>
-                Teams
+                Équipe
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-uppercase fs-5 fw-bolder {{ (Session::get('page') == 'banners') ? 'active' : '' }}" href="{{ route('admin.banners') }}">
                 <span data-feather="users" class="align-text-bottom"></span>
-                Slides
+                Bannières
             </a>
         </li>
         <li class="nav-item">

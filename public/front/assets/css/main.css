@@ -145,6 +145,10 @@ footer .social-media i:hover {
     color: var(--primaryColor);
 }
 
+.f-title {
+    color: var(--primaryColor) !important;
+}
+
 
 
 

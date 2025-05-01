@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb bg-primary py-5">
+    <section class="Breadcrumb bg-primary py-3">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -47,8 +47,8 @@
     <section class="section-helper bg-primary py-5 text-center">
         <div class="container">
            <div class="help-container">
-                <h1 class="title text-white">Do you need help?</h1>
-                <p class="card-text text-white mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsum, odit velit exercitationem praesentium error id iusto dolorem expedita nostrum eius atque? Aliquam ab reprehenderit animi sapiente quasi, voluptate dolorum?</p>
+                <h2 class="title text-white">Pourquoi Choisir Nettoyage Professionnel Sénégal?</h2>
+                <p class="card-text text-white mt-3">Choisir un service de nettoyage professionnel au Sénégal offre de nombreux avantages, que ce soit pour les entreprises, les particuliers ou les institutions. Voici quelques raisons de faire appel à des professionnels du nettoyage :</p>
                 <a href="{{ route('contact') }}" class="btn btn-primary fw-bold rounded-1 px-4 mt-3">Contactez-nous maintenant <i class="ps-2 fa-solid fa-angle-right"></i></a>
            </div>
         </div>
@@ -56,7 +56,6 @@
 
     <section class="section-2  py-5">
         <div class="container py-2">
-            <h1 class="mb-3">NOS FAQS</h1>
             <div class="row">
                 <div class="col-md-12 py-4">
                     <div class="accordion" id="accordionFlushExample">

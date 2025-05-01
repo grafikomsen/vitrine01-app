@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb py-5">
+    <section class="Breadcrumb bg-primary py-3">
         <div class="container">
-            <nav aria-label="breadcrumb bg-primary">
+            <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item">
                         <a class="nav-link px-2 fw-bold text-white" href="{{ route('home') }}">Acceuil</a>

@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function index(){
 
         $blogs = Blog::where('status',1)->orderBy('created_at','DESC')->get();
-        $faqs = Faq::where('status',1)->orderBy('created_at','DESC')->get();
+        $faqs = Faq::where('status',1)->orderBy('created_at','ASC')->get();
 
         Session::put('page', 'blog');
         return view('blog', compact('blogs','faqs'));

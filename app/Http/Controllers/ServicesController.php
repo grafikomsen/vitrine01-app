@@ -12,7 +12,7 @@ class ServicesController extends Controller
     public function index(){
 
         $services = Service::where('status',1)->orderBy('created_at','DESC')->get();
-        $faqs = Faq::where('status',1)->orderBy('created_at','DESC')->get();
+        $faqs = Faq::where('status',1)->orderBy('created_at','ASC')->get();
 
         Session::put('page', 'services');
         return view('services', compact('services','faqs'));

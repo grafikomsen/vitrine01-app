@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb bg-primary py-5">
+    <section class="Breadcrumb bg-primary py-3">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -54,10 +54,18 @@
                                     <h5 class="text-center">{{ $team->name }}</h5>
                                     <p class="card-text text-center">{{ $team->designation }}</p>
                                     <div class="text-center">
-                                        <a href="#"><i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                        <a href="#"><i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i></a>
+                                        <a href="{{ $team->url_fb }}">
+                                            <i class="fa-brands fa-facebook bg-primary p-2 text-white rounded-5 fw-bold"></i>
+                                        </a>
+                                        <a href="{{ $team->url_ins }}">
+                                            <i class="fa-brands fa-instagram bg-primary p-2 text-white rounded-5 fw-bold"></i>
+                                        </a>
+                                        <a href="{{ $team->url_tw }}">
+                                            <i class="fa-brands fa-twitter bg-primary p-2 text-white rounded-5 fw-bold"></i>
+                                        </a>
+                                        <a href="{{ $team->url_in }}">
+                                            <i class="fa-brands fa-linkedin bg-primary p-2 text-white rounded-5 fw-bold"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

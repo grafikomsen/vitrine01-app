@@ -82,16 +82,6 @@
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'home') ? 'active' : '' }}" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
                             </li>
-                            <!--<li class="nav-item dropdown">
-                                <a class="nav-link pe-3 fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    SERVICES
-                                </a>
-                                <ul class="dropdown-menu rounded-0">
-                                    <li><a class="dropdown-item" href="#">SEO</a></li>
-                                    <li><a class="dropdown-item" href="#">Web dev</a></li>
-                                    <li><a class="dropdown-item" href="#">Graphisme</a></li>
-                                </ul>
-                            </li>-->
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'services') ? 'active' : '' }}" href="{{ route('services') }}">SERVICES</a>
                             </li>
@@ -99,13 +89,16 @@
                                 <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'about') ? 'active' : '' }}" href="{{ route('about') }}">A PROPOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'projet') ? 'active' : '' }}" href="{{ route('projets') }}">NOS PARTENAIRES</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'projet') ? 'active' : '' }}" href="{{ route('projets') }}">PARTENAIRES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'blog') ? 'active' : '' }}" href="{{ route('blogs') }}">BLOGS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-4 {{ (Session::get('page') == 'contact') ? 'active' : '' }}" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary fw-bold rounded-0 border-0 px-3">Demande de devis</a>
+                        <a href="{{ route('contact') }}" class="btn btn-primary fw-bold rounded-0 border-0 px-3">Demande de devis</a>
                     </div>
                 </div>
             </nav>
@@ -119,10 +112,10 @@
                 <div class="row pt-5">
                     <div class="col-md-6 px-3 mb-3">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('front/assets/images/logo-white.webp') }}" width="400" alt="">
+                            <img src="{{ asset('front/assets/images/logo-white.webp') }}" width="300" alt="">
                         </a>
-                        <p class="text-white">À l’ère du numérique, vous avez besoin d’un partenaire qui puisse
-                            vous aider à tirer parti des opportunités marketing sur une multitude de canaux en temps réel.
+                        <p class="text-white">
+                            Nettoyage Professionnel Sénégal dispose d’entreprises de nettoyage fiables et compétitives, offrant des services adaptés aux besoins locaux (climat, types de salissures, exigences sectorielles). Que ce soit à Mbour, Saly ou Somone, des professionnels garantissent propreté et satisfaction.
                         </p>
                     </div>
 

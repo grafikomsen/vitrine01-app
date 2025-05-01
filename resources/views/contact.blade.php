@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb bg-primary py-5">
+    <section class="Breadcrumb bg-primary py-3">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -141,12 +141,14 @@
                             <label for="subjet" class="form-label">Objet *</label>
                             <select value="{{ old('subject') }}" class="form-control rounded-1  @error('subject') is-invalid @enderror rounded-0" name="subjet" id="subjet">
                                 <option >--- Selectionnez ---</option>
-                                <option value="">Création Web</option>
-                                <option value="">Création Mobile</option>
-                                <option value="">Cybersécurité</option>
-                                <option value="">Reférencement naturel</option>
-                                <option value="">Marketing digital</option>
-                                <option value="">Branding</option>
+                                <option value="">Nettoyages professionel et industriel</option>
+                                <option value="">Nettoyage fin de chantier</option>
+                                <option value="">Dératisantion</option>
+                                <option value="">Désinfection</option>
+                                <option value="">Désintisation</option>
+                                <option value="">Shampouinage moquette</option>
+                                <option value="">Nettoyage salon</option>
+                                <option value="">Nettoyage matelas</option>
                             </select>
                             <p class="subjet-error invalid-feedback"></p>
                             @if ('subjet')
