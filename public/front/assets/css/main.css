@@ -67,6 +67,12 @@ span {
     background-color: var(--primaryColor);
 }
 
+.t-title {
+    font-size: 0.9rem;
+    color: var(--whiteColor);
+    font-weight: normal;
+}
+
 /*** NAVBAR ***/
 .nav-link {
     color: var(--primaryColor);

@@ -79,16 +79,27 @@
 
     <section class="form-contact">
         <div class="container my-5">
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="row g-4 g-lg-0">
                 <div class="col-12 col-md-6 p-4">
                     <iframe class="w-100 h-100 grayscale rounded-1" src="{{ getSettings()->url_googleMaps }}" height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-12 col-md-6 p-4">
                     <!-- Contact form START -->
-
                     <!-- Title -->
-                    <h2 class="mt-4 mt-md-4">Let's talk</h2>
-                    <p>To request a quote or want to meet up for coffee, contact us directly or fill out the form and we will get back to you promptly</p>
+                    <h3 class="fw-bolder">DEMANDE DE DEVIS GRATUIT</h3>
+                    <p>Demandez votre devis de nettoyage en remplissant le formulaire ci-après. Pour plus d'informations, vous pouvez également contacter notre société de nettoyage. Nous saurons vous conseiller les prestations les plus adaptées à vos besoins, et nous définirons avec vous la périodicité de nos interventions, ponctuelles ou régulières.</p>
 
                     <form action="{{ route('sentFormContact') }}" method="POST" name="sentFormContact" id="sentFormContact">
                         @csrf
@@ -97,7 +108,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4 bg-light-input">
                                     <label for="first_name" class="form-label">Votre prénom *</label>
-                                    <input type="text" value="{{ old('first_name') }}" class="form-control rounded-1 @error('first_name') is-invalid @enderror rounded-0" id="first_name" name="first_name">
+                                    <input type="text" value="{{ old('first_name') }}" class="form-control rounded-1 @error('first_name') is-invalid @enderror rounded-0" placeholder="votre prénom" id="first_name" name="first_name">
                                     <p class="first_name-error invalid-feedback"></p>
                                     @if ('first_name')
                                         <p class="invalid-feedback text-danger"></p>
@@ -107,7 +118,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4 bg-light-input">
                                     <label for="last_name" class="form-label">Votre nom *</label>
-                                    <input type="text" value="{{ old('last_name') }}" class="form-control rounded-1 @error('last_name') is-invalid @enderror rounded-0" id="last_name" name="last_name">
+                                    <input type="text" value="{{ old('last_name') }}" class="form-control rounded-1 @error('last_name') is-invalid @enderror rounded-0" placeholder="votre nom" id="last_name" name="last_name">
                                     <p class="last_name-error invalid-feedback"></p>
                                     @if ('last_name')
                                         <p class="invalid-feedback text-danger"></p>
@@ -117,7 +128,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4 bg-light-input">
                                     <label for="phone" class="form-label">Votre n° de Tél *</label>
-                                    <input type="text"value="{{ old('phone') }}" class="form-control rounded-1 @error('phone') is-invalid @enderror rounded-0" id="phone" name="phone">
+                                    <input type="text"value="{{ old('phone') }}" class="form-control rounded-1 @error('phone') is-invalid @enderror rounded-0" placeholder="votre numéro de téléphone" id="phone" name="phone">
                                     <p class="phone-error invalid-feedback"></p>
                                     @if ('phone')
                                         <p class="invalid-feedback text-danger"></p>
@@ -127,7 +138,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4 bg-light-input">
                                     <label for="email" class="form-label">Votre adresse mail *</label>
-                                    <input type="email"value="{{ old('email') }}" class="form-control rounded-1 @error('email') is-invalid @enderror rounded-0" id="email" name="email">
+                                    <input type="email"value="{{ old('email') }}" class="form-control rounded-1 @error('email') is-invalid @enderror rounded-0" placeholder="votre e-mail" id="email" name="email">
                                     <p class="email-error invalid-feedback"></p>
                                 </div>
                                 @if ('email')
@@ -138,17 +149,17 @@
 
                         <!-- Message -->
                         <div class="mb-4 bg-light-input">
-                            <label for="subjet" class="form-label">Objet *</label>
-                            <select value="{{ old('subject') }}" class="form-control rounded-1  @error('subject') is-invalid @enderror rounded-0" name="subjet" id="subjet">
-                                <option >--- Selectionnez ---</option>
-                                <option value="">Nettoyages professionel et industriel</option>
-                                <option value="">Nettoyage fin de chantier</option>
-                                <option value="">Dératisantion</option>
-                                <option value="">Désinfection</option>
-                                <option value="">Désintisation</option>
-                                <option value="">Shampouinage moquette</option>
-                                <option value="">Nettoyage salon</option>
-                                <option value="">Nettoyage matelas</option>
+                            <label for="subjet" class="form-label">Services *</label>
+                            <select value="{{ old('subject') }}" class="form-control rounded-1  @error('subject') is-invalid @enderror rounded-0" placeholder="Choisissez un service" name="subjet" id="subjet">
+                                <option > --- Selectionnez un service --- </option>
+                                <option value="Nettoyages professionel et industriel">Nettoyages professionel et industriel</option>
+                                <option value="Nettoyage fin de chantier">Nettoyage fin de chantier</option>
+                                <option value="Dératisantion">Dératisantion</option>
+                                <option value="Désinfection">Désinfection</option>
+                                <option value="Désintisation">Désintisation</option>
+                                <option value="Shampouinage moquette">Shampouinage moquette</option>
+                                <option value="Nettoyage salon">Nettoyage salon</option>
+                                <option value="Nettoyage matelas">Nettoyage matelas</option>
                             </select>
                             <p class="subjet-error invalid-feedback"></p>
                             @if ('subjet')
@@ -185,7 +196,7 @@
 
             $("button[type='submit']").prop('disabled',true);
             $.ajax({
-                url: "",
+                url: "{{ route('sentFormContact') }}",
                 type: 'POST',
                 dataType: 'json',
                 data: $('#sentFormContact').serializeArray(),

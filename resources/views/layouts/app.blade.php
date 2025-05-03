@@ -50,7 +50,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white px-2">
                                 <i class="fa fa-location-dot"></i>
-                                <span class="h6">{{ getSettings()->address }}</span>
+                                <span class="t-title">{{ getSettings()->address }}</span>
                             </a>
                         </li>
                     </ul>
@@ -58,13 +58,13 @@
                         <li class="nav-item">
                             <a href="mailto:info@grafikomsen.com" class="nav-link text-white px-2">
                                 <i class="fa fa-envelope"></i>
-                                <span class="h6">{{ getSettings()->email }}</span>
+                                <span class="t-title">{{ getSettings()->email }}</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a  href="tel:+221-119-63-63" class="nav-link text-white px-2">
                                 <i class="fa fa-phone"></i>
-                                <span class="h6">{{ getSettings()->phone }}</span>
+                                <span class="t-title">{{ getSettings()->phone }}</span>
                             </a>
                         </li>
                     </ul>

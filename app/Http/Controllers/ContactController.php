@@ -2,36 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
-    public function index(){
-
-        Session::put('page', 'contact');
-        return view('contact');
-    }
 
     public function sendEmail(Request $request){
 
-        $validator = Validator::make($request->all(),[
+        $rule = [
             'first_name'    => 'required',
             'last_name'     => 'required',
-            'email'         => 'required',
+            'email'         => 'required|email',
             'phone'         => 'required',
             'subjet'        => 'required',
             'message'       => 'required',
-        ]);
+        ];
 
-        if ($validator->passes()) {
-            # code...
-        } else {
-            # code...
-            return redirect()->route('contact')->withErrors($validator);
-        }
+        $request->validate($rule);
 
+        $mailData = [
+            'subject'   => 'Vous avez reçu un email de contact',
+            'first_name'    => $request->first_name,
+            'last_name'     => $request->last_name,
+            'email'         => $request->email,
+            'phone'         => $request->phone,
+            'subjet'        => $request->subjet,
+            'message'       => $request->message,
+        ];
+
+        Mail::to('dev.grafikomsen@gmail.com')->send(new ContactEmail($mailData));
+        session()->flash('success','Merci de nous avoir contactés, nous vous contacterons bientôt.');
+        return redirect()->route('contact');
+    }
+
+    public function contact(){
+
+        Session::put('page', 'contact');
+        return view('contact');
     }
 
 }

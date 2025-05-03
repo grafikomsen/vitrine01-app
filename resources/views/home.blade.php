@@ -12,7 +12,7 @@
                         <div class="carousel-caption d-none d-md-block p-lg-5">
                             <h1 class="text-white">{{ $banner->name }}</h1>
                             <p class="text-white">{{ $banner->content }}</p>
-                            <a class="btn btn-primary px-4 rounded-0 mb-3" href="">En savoir plus</a>
+                            {{-- <a class="btn btn-primary px-4 rounded-0 mb-3" href="">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a> --}}
                         </div>
                     </div>
                     <button class=" carousel-control-prev" type="button" data-bs-traget="#diaporama" data-bs-slide="prev">

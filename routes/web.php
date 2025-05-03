@@ -39,7 +39,7 @@ Route::get('/faqs', [FaqController::class, 'index'])->name('faq');
 Route::get('/realisations', [ProjetController::class, 'index'])->name('projets');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blogs/detail/{id}', [BlogController::class, 'detail'])->name('blogDetail');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 // SEND EMAIL
 Route::post('/send-email', [ContactController::class, 'sendEmail'])->name('sentFormContact');
 
