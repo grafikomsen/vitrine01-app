@@ -27,21 +27,21 @@
                                     <p class="error name-error text-danger"></p>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="content">Description</label>
-                                            <textarea name="content" id="content" rows="7" class="form-control rounded-1"></textarea>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="content">Description</label>
+                                        <textarea name="content" id="content" class="summernote"></textarea>
+                                        <p></p>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="image">Image</label>
-                                            <input type="hidden" name="image_id" id="image_id" value="">
-                                            <div id="image" class="dropzone dz-clickable rounded-1">
-                                                <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
-                                                </div>
+                                </div>
+
+                                <div class="col-12 col-md-12">
+                                    <div class="mb-3">
+                                        <label for="image">Image</label>
+                                        <input type="hidden" name="image_id" id="image_id" value="">
+                                        <div id="image" class="dropzone dz-clickable rounded-1">
+                                            <div class="dz-message needsclick">
+                                                <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                             </div>
                                         </div>
                                     </div>

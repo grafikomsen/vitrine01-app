@@ -56,7 +56,7 @@
                     </ul>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="mailto:info@grafikomsen.com" class="nav-link text-white px-2">
+                            <a href="mailto:info@nettoyage-professionnel-senegal.com" class="nav-link text-white px-2">
                                 <i class="fa fa-envelope"></i>
                                 <span class="t-title">{{ getSettings()->email }}</span>
                             </a>
@@ -108,16 +108,13 @@
             @yield('main')
         </main>
         <!-- ======================= Footer START ======================= -->
-        <footer class="bg-primary py-3">
+        <footer class="bg-primary py-5">
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-md-6 px-3 mb-3">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('front/assets/images/logo-white.webp') }}" width="300" alt="">
+                            <img src="{{ asset('front/assets/images/logo-white.webp') }}" width="350" alt="">
                         </a>
-                        <p class="text-white">
-                            Nettoyage Professionnel Sénégal dispose d’entreprises de nettoyage fiables et compétitives, offrant des services adaptés aux besoins locaux (climat, types de salissures, exigences sectorielles). Que ce soit à Mbour, Saly ou Somone, des professionnels garantissent propreté et satisfaction.
-                        </p>
                     </div>
 
                     <div class="col-6 col-md-2 px-3 mb-3">
@@ -125,9 +122,6 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
                         </ul>
                     </div>
 
@@ -136,9 +130,6 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
                         </ul>
                     </div>
 
@@ -147,9 +138,6 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
                         </ul>
                     </div>
                 </div>

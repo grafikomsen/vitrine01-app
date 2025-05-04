@@ -97,18 +97,30 @@
 @endsection
 @section('extraJs')
     <script>
-        function deleteFaq(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le faq!")) {
+
+        function deleteFaq(id){
+
+            let url = '{{ route("admin.faqs.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le faq!')) {
                 $.ajax({
-                    url: '{{ route("admin.faqs.delete",$faq->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.faqs') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.faqs') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection

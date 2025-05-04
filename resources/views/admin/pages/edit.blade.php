@@ -28,32 +28,34 @@
                                     <p class="error name-error text-danger"></p>
                                 </div>
 
-
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="content">Description</label>
-                                            <textarea name="content" id="description" rows="7" class="form-control rounded-1">{{ $page->content }}</textarea>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="content">Description</label>
+                                        <textarea name="content" id="content" class="summernote">{{ $page->content }}</textarea>
+                                        <p></p>
                                     </div>
+                                </div>
 
+                                <div class="row align-items-center">
                                     <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
+                                        <div class="mb-3">
                                             <label for="image">Image</label>
                                             <input type="hidden" name="image_id" id="image_id" value="">
                                             <div id="image" class="dropzone dz-clickable rounded-1">
-                                                <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
+                                                <div class="dz-message needsclick py-5">
+                                                    <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                                 </div>
                                             </div>
-                                            <img class="img-thumbnail my-2" src="{{ asset('uploads/pages/'.$page->image) }}" width="300" alt="{{ $page->name }}">
                                         </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <img class="img-thumbnail" src="{{ asset('uploads/pages/'.$page->image) }}" width="450" alt="{{ $page->name }}">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
+                                        <div class="form-group my-3">
                                             <label for="status">Status</label>
                                             <select name="status" id="status" class="form-control rounded-1">
                                                 <option {{ ($page->status == 1) ? 'selected' : '' }} value="1">Activé</option>
@@ -62,7 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
+                                        <div class="form-group my-3">
                                             <label for="url">Url de la page</label>
                                             <input type="text" name="url" id="url" value="{{ $page->url }}" class="form-control rounded-1" placeholder="Enter l'url de la page">
                                             <p class="error name-error text-danger"></p>

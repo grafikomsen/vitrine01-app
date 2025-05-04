@@ -85,18 +85,30 @@
 @endsection
 @section('extraJs')
     <script>
-        function deleteSetting(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le setting!")) {
+
+        function deleteSetting(id){
+
+            let url = '{{ route("admin.settings.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le page!')) {
                 $.ajax({
-                    url: '{{ route("admin.settings.delete",$setting->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.settings') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.settings') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection

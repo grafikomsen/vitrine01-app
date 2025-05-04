@@ -30,7 +30,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="answer">Reponse</label>
-                                    <textarea name="answer" id="answer" rows="6" class="form-control rounded-1">{{ $faq->answer }}</textarea>
+                                    <textarea name="answer" id="answer" class="summernote">{{ $faq->answer }}</textarea>
                                 </div>
 
                                 <div class="form-group mb-3">

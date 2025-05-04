@@ -19,13 +19,54 @@
 
     <section class="about bg-light py-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-12 col-md-6 col-lg-6 mb-3">
                     <h2 class="fs-1 text-uppercase py-2">{{ $pages->name }}</h2>
-                    <p>{{ $pages->content }}</p>
+                    <p>{!! $pages->content !!}</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 mb-3">
-                    <img src="{{ asset('uploads/pages/'.$pages->image) }}" class="img-thumbnail border-0 shadow-sm py-2" alt="{{ $pages->name }}">
+                    <img src="{{ asset('uploads/pages/'.$pages->image) }}" class="img-thumbnail" alt="{{ $pages->name }}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Valeur bg-primary py-5">
+        <div class="container">
+            <h1 class="mb-3 text-center text-white">NOS VALEURS</h1>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE MISSION</h5>
+                        <div class="card-body">
+                            <p> Accomplir une tâche crédible et pérenne
+                                pour maintenir une propreté et une hygiène agréable
+                                pour votre environnement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE VISION</h5>
+                        <div class="card-body">
+                            <p> Etre la solution de référence sur le marché pour
+                                tout besoin de nettoyage technique de nos clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 rounded-1 p-2">
+                        <h5 class="fw-bolder fs-4 text-uppercase">NOS VALEURS</h5>
+                        <div class="card-body">
+                            <li class="list-unstyled"> -Engagement</li>
+                            <li class="list-unstyled"> -Innovation</li>
+                            <li class="list-unstyled"> -Esprit d’équipe</li>
+                            <li class="list-unstyled"> -Respect et Intégrité</li>
+                            <li class="list-unstyled"> -Satisfaction client</li>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="answer">Response</label>
-                                    <textarea name="answer" id="answer" rows="6" class="form-control rounded-1"></textarea>
+                                    <textarea name="answer" id="answer" class="summernote"></textarea>
                                 </div>
 
                                 <div class="form-group mb-3">

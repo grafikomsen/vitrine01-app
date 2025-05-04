@@ -23,40 +23,46 @@
                             <div class="card-body">
 
                                 <div class="form-group mb-3">
-                                    <label for="name">Nom du slide</label>
+                                    <label for="name">Nom de la bannière</label>
                                     <input type="text" name="name" id="name" value="{{ $banner->name }}" class="form-control rounded-1" placeholder="Enter le nom du banner">
                                     <p class="error name-error text-danger"></p>
                                 </div>
 
-
-                                <div class="form-group mb-3">
-                                    <label for="content">Description</label>
-                                    <textarea name="content" id="content" rows="6" class="form-control rounded-1">{{ $banner->content }}</textarea>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="content">Description</label>
+                                        <textarea name="content" id="content" class="summernote">{{ $banner->content }}</textarea>
+                                        <p></p>
+                                    </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
                                             <label for="image">Image</label>
                                             <input type="hidden" name="image_id" id="image_id" value="">
                                             <div id="image" class="dropzone dz-clickable rounded-1">
-                                                <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
+                                                <div class="dz-message needsclick py-5">
+                                                    <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                                 </div>
                                             </div>
-                                            <img class="img-thumbnail my-2" src="{{ asset('uploads/banners/'.$banner->image) }}" width="300" alt="{{ $banner->name }}">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="status">Status</label>
-                                            <select name="status" id="status" class="form-control rounded-1">
-                                                <option {{ ($banner->status == 1) ? 'selected' : '' }} value="1">Activé</option>
-                                                <option {{ ($banner->status == 0) ? 'selected' : '' }} value="0">Désactivé</option>
-                                            </select>
-                                        </div>
+                                    <div class="col-12 col-md-6">
+                                        <img class="img-thumbnail" src="{{ asset('uploads/banners/'.$banner->image) }}" width="450" alt="{{ $banner->name }}">
                                     </div>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label for="status">Status</label>
+                                        <select name="status" id="status" class="form-control rounded-1">
+                                            <option {{ ($banner->status == 1) ? 'selected' : '' }} value="1">Activé</option>
+                                            <option {{ ($banner->status == 0) ? 'selected' : '' }} value="0">Désactivé</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="card-footer">
                                 <button type="submit" name="submit" class="btn btn-primary border-0 rounded-1">Modifiez</button>

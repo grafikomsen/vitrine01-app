@@ -29,14 +29,45 @@
 
     <section class="about bg-light py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6 mb-3">
-                    <h2 class="fs-1 text-uppercase py-1">{{ $pages->name }}</h2>
-                    <p>{{ $pages->content }}</p>
-                    <a href="{{ $pages->url }}" class="btn btn-primary fw-bold rounded-0 border-0 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 mb-3">
+                    <h2 class="fs-1 text-uppercase text-center py-1">Nettoyage professionnel Sénégal</h2>
+                    <p class="text-center">Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté. A travers une large gamme de services NPS offres une qualité de nettoyage premium dans plusieurs secteurs d’activité. Présent sur les secteurs d’Mbour, Saly et Somone, NPS garanti un résultat professionnel dans vos chantiers de nettoyage.</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 mb-3">
-                    <img src="{{ asset('uploads/pages/'.$pages->image) }}" class="img-thumbnail border-0 shadow-sm py-2" alt="{{ $pages->name }}">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-helper bg-primary py-5 text-center">
+        <div class="container">
+           <div class="help-container">
+                <h2 class="title text-white">Pourquoi Choisir Nettoyage Professionnel Sénégal?</h2>
+                <p class="card-text text-white mt-3">Choisir un service de nettoyage professionnel au Sénégal offre de nombreux avantages, que ce soit pour les entreprises, les particuliers ou les institutions. Voici quelques raisons de faire appel à des professionnels du nettoyage :</p>
+                <a href="{{ route('contact') }}" class="btn btn-primary fw-bold rounded-1 px-4 mt-3">Contactez-nous maintenant <i class="ps-2 fa-solid fa-angle-right"></i></a>
+           </div>
+        </div>
+    </section>
+
+    <section class="faqs">
+        <div class="container py-2">
+            <div class="row">
+                <div class="col-md-12 py-4">
+                    <div class="accordion" id="accordionFlushExample">
+                        @if ($faqs->isNotEmpty())
+                            @foreach ($faqs as $key => $faq)
+                            <div class="accordion-item shadow-sm mb-2">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed fs-5 f-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-{{ $key }}" aria-expanded="false" aria-controls="flush-{{ $key }}">
+                                        {{ $faq->question }}
+                                    </button>
+                                </h2>
+                                <div id="flush-{{ $key }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">{{ $faq->answer }}</div>
+                                </div>
+                            </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,47 +102,6 @@
                           <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                       </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="Valeur bg-primary py-5">
-        <div class="container">
-            <h1 class="mb-3 text-center text-white">NOS VALEURS</h1>
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 mb-4">
-                    <div class="card h-100 rounded-1 p-2">
-                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE MISSION</h5>
-                        <div class="card-body">
-                            <p> Accomplir une tâche crédible et pérenne
-                                pour maintenir une propreté et une hygiène agréable
-                                pour votre environnement.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4 mb-4">
-                    <div class="card h-100 rounded-1 p-2">
-                        <h5 class="fw-bolder fs-4 text-uppercase">NOTRE VISION</h5>
-                        <div class="card-body">
-                            <p> Etre la solution de référence sur le marché pour
-                                tout besoin de nettoyage technique de nos clients.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4 mb-4">
-                    <div class="card h-100 rounded-1 p-2">
-                        <h5 class="fw-bolder fs-4 text-uppercase">NOS VALEURS</h5>
-                        <div class="card-body">
-                            <li class="list-unstyled"> -Engagement</li>
-                            <li class="list-unstyled"> -Innovation</li>
-                            <li class="list-unstyled"> -Esprit d’équipe</li>
-                            <li class="list-unstyled"> -Respect et Intégrité</li>
-                            <li class="list-unstyled"> -Satisfaction client</li>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

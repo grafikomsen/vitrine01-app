@@ -105,18 +105,30 @@
 @endsection
 @section('extraJs')
     <script>
-        function deleteService(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le service!")) {
+
+        function deleteService(id){
+
+            let url = '{{ route("admin.services.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le service!')) {
                 $.ajax({
-                    url: '{{ route("admin.services.delete",$service->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.services') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.services') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection

@@ -107,18 +107,30 @@
 
 @section('extraJs')
     <script>
-        function deleteBlog(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le blog!")) {
+
+        function deleteBlog(id){
+
+            let url = '{{ route("admin.blogs.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le blog!')) {
                 $.ajax({
-                    url: '{{ route("admin.blogs.delete",$blog->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.blogs') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.blogs') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection

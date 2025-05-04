@@ -105,18 +105,30 @@
 @endsection
 @section('extraJs')
     <script>
-        function deletePage(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le page !")) {
+
+        function deletePage(id){
+
+            let url = '{{ route("admin.pages.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le page!')) {
                 $.ajax({
-                    url: '{{ route("admin.pages.delete",$page->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.pages') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.pages') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection

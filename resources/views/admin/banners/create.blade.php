@@ -30,30 +30,25 @@
 
                                 <div class="form-group mb-3">
                                     <label for="content">Description</label>
-                                    <textarea name="content" id="content" rows="6" class="form-control rounded-1"></textarea>
+                                    <textarea name="content" id="content" class="summernote"></textarea>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="image">Image</label>
-                                            <input type="hidden" name="image_id" id="image_id" value="">
-                                            <div id="image" class="dropzone dz-clickable rounded-1">
-                                                <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
-                                                </div>
-                                            </div>
+                                <div class="form-group mb-3">
+                                    <label for="image">Image</label>
+                                    <input type="hidden" name="image_id" id="image_id" value="">
+                                    <div id="image" class="dropzone dz-clickable rounded-1">
+                                        <div class="dz-message needsclick">
+                                            <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="status">Status</label>
-                                            <select name="status" id="status" class="form-control rounded-1">
-                                                <option value="1">Activé</option>
-                                                <option value="0">Désactivé</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="status">Status</label>
+                                    <select name="status" id="status" class="form-control rounded-1">
+                                        <option value="1">Activé</option>
+                                        <option value="0">Désactivé</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="card-footer">

@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="{{ asset('admin/assets/fontawesome/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('admin/assets/bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/assets/plugins/summernote/summernote-bs5.min.js') }}">
+        <link rel="stylesheet" href="{{ asset('admin/assets/summernote/summernote-bs5.min.css') }}">
         <link rel="stylesheet" href="{{ asset('admin/assets/plugins/dropzone/min/dropzone.min.css') }}">
         <link rel="stylesheet" href="{{ asset('admin/assets/css/main.css') }}">
 
@@ -49,7 +49,8 @@
 
         <script src="{{ asset('admin/assets/plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('admin/assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('admin/assets/plugins/summernote/summernote-bs5.min.js') }}"></script>
+        <script src="{{ asset('admin/assets/summernote/summernote-bs5.min.js') }}"></script>
+        <script src="{{ asset('admin/assets/summernote/lang/summernote-fr-FR.min.js') }}"></script>
         <script src="{{ asset('admin/assets/plugins/dropzone/min/dropzone.min.js') }}"></script>
         <script src="{{ asset('admin/assets/js/main.js') }}"></script>
         <script>
@@ -58,6 +59,14 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
                 }
+            });
+
+            $(document).ready(function(){
+                $('.summernote').summernote({
+                    placeholder: '',
+                    tabsize: 2,
+                    height: 300
+                });
             });
 
         </script>

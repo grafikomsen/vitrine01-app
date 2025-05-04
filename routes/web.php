@@ -59,7 +59,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/services/store', [AdminServicesController::class, 'store'])->name('admin.services.store');
         Route::get('/services/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin.services.edit');
         Route::put('/services/updated/{id}', [AdminServicesController::class, 'updated'])->name('admin.services.updated');
-        Route::delete('/services/delete/{id}', [AdminServicesController::class, 'destroy'])->name('admin.services.delete');
+        Route::delete('/services/delete/{id}', [AdminServicesController::class, 'destroy'])->name('admin.services.destroy');
 
         //BLOGS
         Route::get('/blogs', [adminBlogController::class, 'blogs'])->name('admin.blogs');
@@ -67,7 +67,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/blogs/store', [adminBlogController::class, 'store'])->name('admin.blogs.store');
         Route::get('/blogs/edit/{id}', [adminBlogController::class, 'edit'])->name('admin.blogs.edit');
         Route::put('/blogs/updated/{id}', [adminBlogController::class, 'updated'])->name('admin.blogs.updated');
-        Route::delete('/blogs/delete/{id}', [adminBlogController::class, 'destroy'])->name('admin.blogs.delete');
+        Route::delete('/blogs/delete/{id}', [adminBlogController::class, 'destroy'])->name('admin.blogs.destroy');
 
         //PARTNERS
         Route::get('/partners', [adminParternController::class, 'parterns'])->name('admin.partners');
@@ -75,7 +75,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/partners/store', [adminParternController::class, 'store'])->name('admin.partners.store');
         Route::get('/partners/edit/{id}', [adminParternController::class, 'edit'])->name('admin.partners.edit');
         Route::put('/partners/updated/{id}', [adminParternController::class, 'updated'])->name('admin.partners.updated');
-        Route::delete('/partners/delete/{id}', [adminParternController::class, 'destroy'])->name('admin.partners.delete');
+        Route::delete('/partners/delete/{id}', [adminParternController::class, 'destroy'])->name('admin.partners.destroy');
 
         //FAQS
         Route::get('/faqs', [adminFaqController::class, 'faqs'])->name('admin.faqs');
@@ -83,7 +83,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/faqs/store', [adminFaqController::class, 'store'])->name('admin.faqs.store');
         Route::get('/faqs/edit/{id}', [adminFaqController::class, 'edit'])->name('admin.faqs.edit');
         Route::put('/faqs/updated/{id}', [adminFaqController::class, 'updated'])->name('admin.faqs.updated');
-        Route::delete('/faqs/delete/{id}', [adminFaqController::class, 'destroy'])->name('admin.faqs.delete');
+        Route::delete('/faqs/delete/{id}', [adminFaqController::class, 'destroy'])->name('admin.faqs.destroy');
 
         //BANNERS
         Route::get('/banners', [adminBannerController::class, 'banners'])->name('admin.banners');
@@ -91,7 +91,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/banners/store', [adminBannerController::class, 'store'])->name('admin.banners.store');
         Route::get('/banners/edit/{id}', [adminBannerController::class, 'edit'])->name('admin.banners.edit');
         Route::put('/banners/updated/{id}', [adminBannerController::class, 'updated'])->name('admin.banners.updated');
-        Route::delete('/banners/delete/{id}', [adminBannerController::class, 'destroy'])->name('admin.banners.delete');
+        Route::delete('/banners/delete/{id}', [adminBannerController::class, 'destroy'])->name('admin.banners.destroy');
 
         //TEAMS
         Route::get('/teams', [adminTeamController::class, 'teams'])->name('admin.teams');
@@ -99,7 +99,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/teams/store', [adminTeamController::class, 'store'])->name('admin.teams.store');
         Route::get('/teams/edit/{id}', [adminTeamController::class, 'edit'])->name('admin.teams.edit');
         Route::put('/teams/updated/{id}', [adminTeamController::class, 'updated'])->name('admin.teams.updated');
-        Route::delete('/teams/delete/{id}', [adminTeamController::class, 'destroy'])->name('admin.teams.delete');
+        Route::delete('/teams/delete/{id}', [adminTeamController::class, 'destroy'])->name('admin.teams.destroy');
 
         //PAGES
         Route::get('/pages', [adminPageController::class, 'pages'])->name('admin.pages');
@@ -107,7 +107,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/pages/store', [adminPageController::class, 'store'])->name('admin.pages.store');
         Route::get('/pages/edit/{id}', [adminPageController::class, 'edit'])->name('admin.pages.edit');
         Route::put('/pages/updated/{id}', [adminPageController::class, 'updated'])->name('admin.pages.updated');
-        Route::delete('/pages/delete/{id}', [adminPageController::class, 'destroy'])->name('admin.pages.delete');
+        Route::delete('/pages/delete/{id}', [adminPageController::class, 'destroy'])->name('admin.pages.destroy');
 
         //PARAMÉTRES
         Route::get('/settings', [adminSettingController::class, 'settings'])->name('admin.settings');
@@ -115,7 +115,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::post('/settings/store', [adminSettingController::class, 'store'])->name('admin.settings.store');
         Route::get('/settings/edit/{id}', [adminSettingController::class, 'edit'])->name('admin.settings.edit');
         Route::put('/settings/updated/{id}', [adminSettingController::class, 'updated'])->name('admin.settings.updated');
-        Route::delete('/settings/delete/{id}', [adminSettingController::class, 'destroy'])->name('admin.settings.delete');
+        Route::delete('/settings/delete/{id}', [adminSettingController::class, 'destroy'])->name('admin.settings.destroy');
 
         //IMAGE
         Route::post('/temp/upload', [TempImageController::class, 'upload'])->name('tempUpload');

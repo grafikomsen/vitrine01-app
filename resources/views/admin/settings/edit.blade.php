@@ -41,7 +41,7 @@
                                             <input type="hidden" name="image_id" id="image_id" value="">
                                             <div id="image" class="dropzone dz-clickable rounded-1">
                                                 <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
+                                                    <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail my-2" src="{{ asset('uploads/settings/'.$setting->image) }}" width="50" alt="{{ $setting->name }}">

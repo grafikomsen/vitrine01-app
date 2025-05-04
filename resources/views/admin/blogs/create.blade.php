@@ -30,7 +30,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="description">Description</label>
-                                    <textarea name="description" id="description" rows="6" class="form-control rounded-1"></textarea>
+                                    <textarea name="description" id="description" class="summernote"></textarea>
                                 </div>
 
                                 <div class="row">
@@ -40,7 +40,7 @@
                                             <input type="hidden" name="image_id" id="image_id" value="">
                                             <div id="image" class="dropzone dz-clickable rounded-1">
                                                 <div class="dz-message needsclick">
-                                                    <br>Drop files here or click to upload.<br><br>
+                                                    <br>Déposez les fichiers ici ou cliquez pour télécharger.<br><br>
                                                 </div>
                                             </div>
                                         </div>

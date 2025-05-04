@@ -107,18 +107,30 @@
 
 @section('extraJs')
     <script>
-        function deletebanner(id) {
-            if (confirm("Êtes-vous sûr de vouloir supprimer le banner!")) {
+
+        function deletebanner(id){
+
+            let url = '{{ route("admin.banners.destroy","ID") }}';
+            let newUrl = url.replace('ID',id);
+
+            if (confirm('Êtes-vous sûr de vouloir supprimer le banner!')) {
                 $.ajax({
-                    url: '{{ route("admin.banners.delete",$banner->id) }}',
+                    url: newUrl,
                     type: 'DELETE',
-                    dataType: 'json',
                     data: {},
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     success: function (response) {
-                        window.location.href = "{{ route('admin.banners') }}";
+                        $("button[type=submit]").prop('desabled', false);
+                        if (response['status']) {
+                            window.location.href="{{ route('admin.banners') }}";
+                        }
                     }
                 })
             }
-        };
+        }
+
     </script>
 @endsection
