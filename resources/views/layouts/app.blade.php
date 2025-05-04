@@ -84,10 +84,10 @@
                                 <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'home') ? 'active' : '' }}" aria-current="page" href="{{ route('home') }}">ACCUEIL</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'services') ? 'active' : '' }}" href="{{ route('services') }}">SERVICES</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'about') ? 'active' : '' }}" href="{{ route('about') }}">A PROPOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'about') ? 'active' : '' }}" href="{{ route('about') }}">A PROPOS</a>
+                                <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'services') ? 'active' : '' }}" href="{{ route('services') }}">SERVICES</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold pe-3 {{ (Session::get('page') == 'projet') ? 'active' : '' }}" href="{{ route('projets') }}">PARTENAIRES</a>
@@ -108,9 +108,9 @@
             @yield('main')
         </main>
         <!-- ======================= Footer START ======================= -->
-        <footer class="bg-primary py-5">
+        <footer class="bg-primary py-3">
             <div class="container">
-                <div class="row pt-5">
+                <div class="row py-5">
                     <div class="col-md-6 px-3 mb-3">
                         <a href="{{ route('home') }}">
                             <img src="{{ asset('front/assets/images/logo-white.webp') }}" width="350" alt="">
@@ -118,26 +118,49 @@
                     </div>
 
                     <div class="col-6 col-md-2 px-3 mb-3">
-                        <h5 class="text-white fw-bolder">Section</h5>
+                        <h5 class="text-white fw-bolder">Nos expertises</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-white">
+                                    Propreté & services associés Sécurité
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-white">
+                                    Features
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-md-2 px-3 mb-3">
-                        <h5 class="text-white fw-bolder">Section</h5>
+                        <h5 class="text-white fw-bolder">Nos services</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-white">
+                                    Nettoyage industriel
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-white">
+                                    Pressing
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-md-2 px-3 mb-3">
-                        <h5 class="text-white fw-bolder">Section</h5>
+                        <h5 class="text-white fw-bolder">Liens Rapides</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+                            <li class="nav-item mb-2">
+                                <a href="{{ route('projets') }}" class="nav-link p-0 text-white">Nos partenaires</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="{{ route('blogs') }}" class="nav-link p-0 text-white">Nos blogs</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="{{ route('contact') }}" class="nav-link p-0 text-white">Contactez-nous</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -158,6 +181,11 @@
                         <li class="ms-3">
                             <a class="nav-link text-white" href="{{ getSettings()->facebook  }}">
                                 <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="nav-link text-white" href="">
+                                Plan du site <i class="fa-solid fa-network-wired text-white"></i>
                             </a>
                         </li>
                     </ul>
