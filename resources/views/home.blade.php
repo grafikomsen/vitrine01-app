@@ -102,24 +102,30 @@
         <div class="container">
             <h1 class="mb-3 text-center">NOS PARTENAIRES</h1>
             <div class="row">
-                @if ($parterns->isNotEmpty())
-                    @foreach ($parterns as $partern)
-                    <div class="col-sm-12 col-md-3 col-lg-3">
-                        <div class="card bg-primary rounded-1 border-0 shadow-sm mb-4">
-                            @if (!empty($partern->image))
-                                <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/parterns/'.$partern->image) }}" width="50" height="50" role="img" alt="{{ $partern->name }}"/>
-                            @else
-                                <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $partern->name }}">
-                            @endif
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="row">
+                            @if ($parterns->isNotEmpty())
+                                @foreach ($parterns as $partern)
+                                    <div class="col-sm-12 col-md-3 col-lg-3">
+                                        <div class="card bg-primary rounded-1 border-0 shadow-sm mb-4">
+                                            @if (!empty($partern->image))
+                                                <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/parterns/'.$partern->image) }}" width="50" height="50" role="img" alt="{{ $partern->name }}"/>
+                                            @else
+                                                <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $partern->name }}">
+                                            @endif
 
-                            <div class="card-body pt-1">
-                                <h5 class="card-title text-uppercase text-white text-center fw-bold">{{ $partern->name }}</h5>
-                                <p class="card-text">{{ $partern->short_desc }}</p>
-                            </div>
+                                            <div class="card-body pt-1">
+                                                <h5 class="card-title text-uppercase text-white text-center fw-bold">{{ $partern->name }}</h5>
+                                                <p class="card-text">{{ $partern->short_desc }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
-                    @endforeach
-                @endif
+                </div>
             </div>
         </div>
     </section>
@@ -130,12 +136,12 @@
             <div class="row">
                 @if ($blogs->isNotEmpty())
                     @foreach ($blogs as $blog)
-                    <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-sm-12 col-md-4 col-lg-4 h-100">
                         <div class="card rounded-0 border-0 shadow-sm mb-4">
                             @if (!empty($blog->image))
-                                <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/blogs/'.$blog->image) }}" width="100%" height="180" role="img" alt="{{ $blog->name }}"/>
+                                <img class="img-thumbnail rounded-0 p-2" src="{{ asset('uploads/blogs/'.$blog->image) }}" alt="{{ $blog->name }}"/>
                             @else
-                                <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $blog->name }}">
+                                <img class="card-img-top rounded-0" src="" alt="{{ $blog->name }}">
                             @endif
 
                             <div class="card-body">
