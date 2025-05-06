@@ -19,7 +19,7 @@
 
     <section class="bg-light py-5">
         <div class="container">
-            <h1 class="mb-3">NOS BLOGS</h1>
+            <h1 class="mb-3">NOS ACTUALITÉS</h1>
             <div class="row">
                 @if ($blogs->isNotEmpty())
                     @foreach ($blogs as $blog)
