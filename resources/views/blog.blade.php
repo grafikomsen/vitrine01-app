@@ -23,8 +23,8 @@
             <div class="row">
                 @if ($blogs->isNotEmpty())
                     @foreach ($blogs as $blog)
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="card rounded-1 border-0 shadow-sm mb-4">
+                    <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
+                        <div class="card rounded-1 border-0 shadow-sm h-100">
                             @if (!empty($blog->image))
                                 <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/blogs/'.$blog->image) }}" width="100%" height="180" role="img" alt="{{ $blog->name }}"/>
                             @else
