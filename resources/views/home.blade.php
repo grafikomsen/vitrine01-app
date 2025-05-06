@@ -3,7 +3,7 @@
 
     <section class="hero">
         @if ($banners->isNotEmpty())
-            <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
+            <div id="diaporama" class="carousel slide align-items-center" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($banners as $banner)
                     <div class="carousel-item active">
