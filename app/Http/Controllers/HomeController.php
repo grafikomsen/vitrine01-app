@@ -8,7 +8,6 @@ use App\Models\Faq;
 use App\Models\Page;
 use App\Models\Partern;
 use App\Models\Service;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller

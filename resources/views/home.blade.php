@@ -7,7 +7,7 @@
                 <div class="carousel-inner">
                     @foreach ($banners as $banner)
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+                        <img class="d-block w-100 h-auto object-fit-cover" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
 
                         <div class="carousel-caption d-none d-md-block p-lg-5">
                             <h1 class="text-white">{{ $banner->name }}</h1>
@@ -88,7 +88,7 @@
                                 <img src="{{ asset('uploads/services/'.$service->image) }}" width="300" height="225" class="card-img border-0 rounded-1" alt="{{ $service->name }}">
                                 <div class="card-img-overlay mb-4 d-block text-center align-content-center">
                                     <h5 class="card-title bg-white shadow-sm fw-bolder fs-4 text-center text-uppercase p-4">{{ $service->name }}</h5>
-                                    <a href="{{ route('serviceDetail',$service->id) }}" class="btn btn-primary fw-bold shadow-sm rounded-0 border-0 px-3">En savoir plus</a>
+                                    <a href="{{ route('serviceDetail',$service->slug) }}" class="btn btn-primary fw-bold shadow-sm rounded-0 border-0 px-3">En savoir plus</a>
                                 </div>
                             </div>
                         </div>
@@ -110,9 +110,9 @@
                                     <div class="col-sm-12 col-md-3 col-lg-3">
                                         <div class="card bg-primary rounded-1 border-0 shadow-sm mb-4">
                                             @if (!empty($partern->image))
-                                                <img class="bd-placeholder-img card-img-top rounded-0 p-2" src="{{ asset('uploads/parterns/'.$partern->image) }}" width="50" height="50" role="img" alt="{{ $partern->name }}"/>
+                                                <img class="bd-placeholder-img rounded-0 p-2" src="{{ asset('uploads/parterns/'.$partern->image) }}" width="50" height="50" role="img" alt="{{ $partern->name }}"/>
                                             @else
-                                                <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $partern->name }}">
+                                                <img class="bd-placeholder-img rounded-0" src="" alt="{{ $partern->name }}">
                                             @endif
 
                                             <div class="card-body pt-1">
@@ -140,14 +140,12 @@
                         <div class="card rounded-0 border-0 h-100 shadow-sm">
                             @if (!empty($blog->image))
                                 <img class="img-thumbnail rounded-0 p-2" src="{{ asset('uploads/blogs/'.$blog->image) }}" alt="{{ $blog->name }}"/>
-                            @else
-                                <img class="card-img-top rounded-0" src="" alt="{{ $blog->name }}">
                             @endif
 
                             <div class="card-body">
-                                <h5 class="card-title text-uppercase fw-bold">{{ $blog->name }}</h5>
-                                <p class="card-text">{{ $blog->short_desc }}</p>
-                                <a href="{{ route('blogDetail',$blog->id) }}" class="btn btn-primary fw-bold rounded-0 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
+                                <h5 class="card-title text-uppercase fs-6 fw-bold">{{ $blog->name }}</h5>
+                                <p class="card-text">{!! $blog->short_desc !!}</p>
+                                <a href="{{ route('blogDetail',$blog->slug) }}" class="btn btn-primary fw-bold rounded-0 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

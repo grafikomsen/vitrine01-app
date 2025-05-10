@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <!-- SEO -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{ getSettings()->description }}">
-        <meta name="keyword" content="{{ getSettings()->keyword }}">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="_token" content="{{ csrf_token() }}">
 
-        <!-- SEO -->
-        @if (!empty(getSettings()) && getSettings()->website_title != '')
-        <title>{{ getSettings()->website_title }}</title>
-        @else
-        <title></title>
-        @endif
-        <meta name="description" content="{{ getSettings()->description }}" />
-        <link rel="canonical" href="{{ getSettings()->url_canonique }}" />
-        <meta property="og:locale" content="{{ getSettings()->og_locale }}" />
-        <meta property="og:type" content="{{ getSettings()->og_type }}" />
-        <meta property="og:title" content="{{ getSettings()->website_title }}" />
-        <meta property="og:description" content="{{ getSettings()->description }}" />
-        <meta property="og:url" content="{{ getSettings()->url_canonique }}" />
-        <meta property="og:site_name" content="{{ getSettings()->website_title }}" />
-        <meta property="article:modified_time" content="{{ getSettings()->article_modified_time }}" />
-        <meta property="og:image" content="http://127.0.0.1:8000/uploads/settings/setting-1737673306-1.jpg" />
-        <meta property="og:image:width" content="1024" />
-        <meta property="og:image:height" content="1024" />
-        <meta property="og:image:type" content="{{ getSettings()->og_image_type }}" />
-        <meta name="twitter:card" content="{{ getSettings()->twitter_card }}" />
-        <meta name="google-site-verification" content="{{ getSettings()->url_googleSearchConsole }}" />
+        {!! SEOMeta::generate() !!}
+        {!! OpenGraph::generate() !!}
+        {!! Twitter::generate() !!}
+        {!! JsonLd::generate() !!}
         <!-- / SEO -->
 
         <!-- FONTAWSOME -->

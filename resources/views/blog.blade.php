@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb bg-primary py-3">
+    <section class="Breadcrumb bg-primary py-4">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -33,8 +33,8 @@
 
                             <div class="card-body">
                                 <h5 class="card-title text-uppercase fw-bold">{{ $blog->name }}</h5>
-                                <p class="card-text">{{ $blog->short_desc }}</p>
-                                <a href="{{ route('blogDetail',$blog->id) }}" class="btn btn-primary fw-bold rounded-1 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
+                                <p class="card-text">{!! $blog->short_desc !!}</p>
+                                <a href="{{ route('blogDetail',$blog->slug) }}" class="btn btn-primary fw-bold rounded-1 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

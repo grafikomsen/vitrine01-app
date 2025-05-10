@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -39,8 +40,9 @@ class BlogController extends Controller
             # code...
             $blog = new Blog;
             $blog->name        = $request->name;
+            $blog->slug        = Str::slug($request->name);
+            $blog->short_desc  = Str::limit($request->description, 150);
             $blog->description = $request->description;
-            $blog->short_desc  = $request->short_desc;
             $blog->status      = $request->status;
             $blog->save();
 
@@ -110,8 +112,9 @@ class BlogController extends Controller
             $oldImageName = $blog->image;
 
             $blog->name        = $request->name;
+            $blog->slug        = Str::slug($request->name);
+            $blog->short_desc  = Str::limit($request->description, 150);
             $blog->description = $request->description;
-            $blog->short_desc  = $request->short_desc;
             $blog->status      = $request->status;
             $blog->save();
 

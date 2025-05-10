@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('main')
-    <section class="Breadcrumb bg-primary py-3">
+    <section class="Breadcrumb bg-primary py-4">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -20,13 +20,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-2">
-                    <div class="image-red-background">
-                        <img class="img-fluid rounded-1" src="{{ asset('uploads/services/'.$service->image) }}" alt="{{ $service->name }}">
+                    <div>
+                        <img class="img-fluid py-3 w-100" src="{{ asset('uploads/services/'.$service->image) }}" alt="{{ $service->name }}">
                     </div>
                 </div>
                 <div class="col-12 mt-2">
                     <div class="about-block">
-                        <h1 class="text-uppercase mb-3">{{ $service->name }}</h1>
+                        <h1 class="text-uppercase my-3">{{ $service->name }}</h1>
                         <p>{!! $service->description !!}</p>
                     </div>
                 </div>

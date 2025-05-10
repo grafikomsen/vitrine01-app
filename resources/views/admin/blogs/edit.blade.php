@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group mb-3">
                                             <label for="image">Image</label>
                                             <input type="hidden" name="image_id" id="image_id" value="">
@@ -45,12 +45,6 @@
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail my-2" src="{{ asset('uploads/blogs/'.$blog->image) }}" width="300" alt="{{ $blog->name }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label for="short_desc">Description courte</label>
-                                            <textarea name="short_desc" id="short_desc" class="form-control rounded-1" cols="30" rows="7">{{ $blog->short_desc }}</textarea>
                                         </div>
                                     </div>
                                 </div>

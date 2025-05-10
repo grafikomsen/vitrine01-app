@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\TempFile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -39,9 +40,10 @@ class ServicesController extends Controller
             # code...
             $service = new Service;
             $service->name        = $request->name;
+            $service->slug        = Str::slug($request->name);
             $service->icon        = $request->icon;
+            $service->short_desc  = Str::limit($request->description, 150);
             $service->description = $request->description;
-            $service->short_desc  = $request->short_desc;
             $service->status      = $request->status;
             $service->save();
 
@@ -111,9 +113,10 @@ class ServicesController extends Controller
             $oldImageName = $service->image;
 
             $service->name        = $request->name;
+            $service->slug        = Str::slug($request->name);
             $service->icon        = $request->icon;
+            $service->short_desc  = Str::limit($request->description, 150);
             $service->description = $request->description;
-            $service->short_desc  = $request->short_desc;
             $service->status      = $request->status;
             $service->save();
 

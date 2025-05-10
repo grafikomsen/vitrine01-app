@@ -19,6 +19,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\SitemapGenerator;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,16 +32,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/generate-sitemap', function(){
+    SitemapGenerator::create('/')->writeToFile(public_path('sitemap.xml'));
+    dump('Sitemap généré');
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
-Route::get('/services/detail/{id}', [ServicesController::class, 'detail'])->name('serviceDetail');
+Route::get('/services/{slug}', [ServicesController::class, 'detail'])->name('serviceDetail');
 Route::get('/a-propos-de-nous', [AboutController::class, 'index'])->name('about');
 Route::get('/faqs', [FaqController::class, 'index'])->name('faq');
 Route::get('/realisations', [ProjetController::class, 'index'])->name('projets');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
-Route::get('/blogs/detail/{id}', [BlogController::class, 'detail'])->name('blogDetail');
+Route::get('/blogs/{slug}', [BlogController::class, 'detail'])->name('blogDetail');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+SitemapGenerator::create('/')->writeToFile(public_path('sitemap.xml'));
 // SEND EMAIL
 Route::post('/send-email', [ContactController::class, 'sendEmail'])->name('sentFormContact');
 

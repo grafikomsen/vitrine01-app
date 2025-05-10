@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 
-    <section class="Breadcrumb bg-primary py-3">
+    <section class="Breadcrumb bg-primary py-4">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -26,15 +26,12 @@
                     <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
                         <div class="card h-100 rounded-1 border-0 shadow-sm">
                             @if (!empty($service->image))
-                                <img class="bd-placeholder-img card-img-top rounded-0 p-2 w-100" src="{{ asset('uploads/services/'.$service->image) }}" alt="{{ $service->name }}"/>
-                            @else
-                                <img class="bd-placeholder-img card-img-top rounded-0" src="" alt="{{ $service->name }}">
+                                <img class="bd-placeholder-img rounded-0 p-2" src="{{ asset('uploads/services/'.$service->image) }}" alt="{{ $service->name }}"/>
                             @endif
-
                             <div class="card-body">
-                                <h5 class="card-title text-uppercase fw-bold">{{ $service->name }}</h5>
-                                <p class="card-text">{{ $service->short_desc }}</p>
-                                <a href="{{ route('serviceDetail',$service->id) }}" class="btn btn-primary fw-bold rounded-1 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
+                                <h5 class="card-title fs-5 text-uppercase fw-bold">{{ $service->name }}</h5>
+                                <p class="card-text">{!! $service->short_desc !!}</p>
+                                <a href="{{ route('serviceDetail',$service->slug) }}" class="btn btn-primary fw-bold rounded-1 px-3">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
