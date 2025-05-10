@@ -11,6 +11,7 @@
         {!! OpenGraph::generate() !!}
         {!! Twitter::generate() !!}
         {!! JsonLd::generate() !!}
+        <meta name="google-site-verification" content="yvoqReznvbNjGnD7erLkhnOhiFJ5IjT4yROESovbYKo">
         <!-- / SEO -->
 
         <!-- FONTAWSOME -->
