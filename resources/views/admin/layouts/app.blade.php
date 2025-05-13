@@ -9,10 +9,17 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Dashboard Template · Bootstrap v5.2</title>
 
+        <!-- FAVICON -->
+        <link rel="shortcut icon" type="image/png" href="{{ asset('admin/assets/images/favicon.png') }}" />
+        <!-- FONTAWESOME -->
         <link rel="stylesheet" href="{{ asset('admin/assets/fontawesome/css/all.min.css') }}">
+        <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="{{ asset('admin/assets/bootstrap/css/bootstrap.min.css') }}">
+        <!-- SUMMERNOTE -->
         <link rel="stylesheet" href="{{ asset('admin/assets/summernote/summernote-bs5.min.css') }}">
+        <!-- DROPZONE -->
         <link rel="stylesheet" href="{{ asset('admin/assets/plugins/dropzone/min/dropzone.min.css') }}">
+        <!-- MAIN -->
         <link rel="stylesheet" href="{{ asset('admin/assets/css/main.css') }}">
 
         <!-- Custom styles for this template -->

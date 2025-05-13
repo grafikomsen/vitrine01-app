@@ -14,6 +14,8 @@
         <meta name="google-site-verification" content="yvoqReznvbNjGnD7erLkhnOhiFJ5IjT4yROESovbYKo">
         <!-- / SEO -->
 
+        <!-- FAVICON -->
+        <link rel="shortcut icon" type="image/png" href="{{ asset('front/assets/images/favicon.png') }}" />
         <!-- FONTAWSOME -->
         <link  rel="stylesheet" href="{{ asset('front/assets/fontawesome/css/all.css') }}">
         <!-- BOOTSTRAP -->
