@@ -7,7 +7,7 @@
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Hugo 0.104.2">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Dashboard Template · Bootstrap v5.2</title>
+        <title>Nettoyage professionnel Sénégal</title>
 
         <!-- FAVICON -->
         <link rel="shortcut icon" type="image/png" href="{{ asset('admin/assets/images/favicon.png') }}" />

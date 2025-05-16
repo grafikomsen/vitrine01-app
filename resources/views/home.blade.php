@@ -7,10 +7,10 @@
                 <div class="carousel-inner">
                     @foreach ($banners as $banner)
                     <div class="carousel-item active">
-                        <img class="d-block w-100 h-auto object-fit-cover" src="{{ asset('uploads/banners/'.$banner->image) }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+                        <img class="d-block w-100 h-auto object-fit-cover" src="{{ asset('uploads/banners/'.$banner->image) }}" alt="{{ $banner->name }}" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
 
                         <div class="carousel-caption d-none d-md-block p-lg-5">
-                            <h1 class="text-white">{{ $banner->name }}</h1>
+                            <h3 class="fs-1 fw-bolder text-white">{{ $banner->name }}</h3>
                             <p class="text-white">{{ $banner->content }}</p>
                             {{-- <a class="btn btn-primary px-4 rounded-0 mb-3" href="">En savoir plus <i class="ps-2 fa-solid fa-angle-right"></i></a> --}}
                         </div>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 mb-3">
-                    <h2 class="fs-1 text-uppercase text-center py-1">Nettoyage professionnel Sénégal</h2>
+                    <h1 class="fs-1 text-uppercase text-center py-1">Nettoyage professionnel Sénégal</h1>
                     <p class="text-center">Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté. A travers une large gamme de services NPS offres une qualité de nettoyage premium dans plusieurs secteurs d’activité. Présent sur les secteurs d’Mbour, Saly et Somone, NPS garanti un résultat professionnel dans vos chantiers de nettoyage.</p>
                 </div>
             </div>

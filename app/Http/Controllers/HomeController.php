@@ -19,11 +19,11 @@ class HomeController extends Controller
     public function index(){
 
         SEOMeta::setTitle('Nettoyage professionnel Sénégal');
-        SEOMeta::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté. A travers une large gamme de services NPS offres une qualité de nettoyage premium dans plusieurs secteurs d’activité. Présent sur les secteurs d’Mbour, Saly et Somone, NPS garanti un résultat professionnel dans vos chantiers de nettoyage.');
+        SEOMeta::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté.');
         SEOMeta::addKeyword(['Nettoyage professionnel Sénégal', 'Nettoyage professionnel Mbour', 'Nettoyage professionnel Saly', 'Nettoyage professionnel Somone']);
         SEOMeta::setCanonical(route('home'));
 
-        OpenGraph::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté. A travers une large gamme de services NPS offres une qualité de nettoyage premium dans plusieurs secteurs d’activité. Présent sur les secteurs d’Mbour, Saly et Somone, NPS garanti un résultat professionnel dans vos chantiers de nettoyage.');
+        OpenGraph::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté.');
         OpenGraph::setTitle('Nettoyage professionnel Sénégal');
         OpenGraph::setUrl(route('home'));
         OpenGraph::addProperty('type', 'articles');
@@ -32,7 +32,7 @@ class HomeController extends Controller
         TwitterCard::setSite('@NettoyageprofessionnelSénégal');
 
         JsonLd::setTitle('Nettoyage professionnel Sénégal');
-        JsonLd::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté. A travers une large gamme de services NPS offres une qualité de nettoyage premium dans plusieurs secteurs d’activité. Présent sur les secteurs d’Mbour, Saly et Somone, NPS garanti un résultat professionnel dans vos chantiers de nettoyage.');
+        JsonLd::setDescription('Le nettoyage professionnel au Sénégal est un secteur en pleine croissance, NPS facilite le quotidien des entreprises, institutions, particuliers soucieux d’hygiène et de propreté.');
         JsonLd::addImage('http://127.0.0.1:8000/uploads/pages/page-1737503977-1.jpeg');
 
         $pages      = Page::where('status',1)->first();
